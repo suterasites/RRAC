@@ -1,0 +1,8 @@
+# Webflow legacy URLs -> new static URLs
+/contact-page          /contact          301
+/contact-page/         /contact          301
+
+# Common variants
+/home                  /                 301
+/index                 /                 301
+/index.html            /                 301
