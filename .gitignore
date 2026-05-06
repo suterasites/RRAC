@@ -1,0 +1,13 @@
+# Local dev / OS
+node_modules/
+.DS_Store
+Thumbs.db
+*.log
+
+# Local screenshot working directory
+temporary screenshots/
+
+# Editor
+.vscode/
+.idea/
+*.swp
