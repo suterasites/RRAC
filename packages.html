@@ -117,6 +117,75 @@
     from { opacity: 0; transform: translateY(6px); }
     to   { opacity: 1; transform: translateY(0); }
   }
+
+  /* Horizontal package slider */
+  .price-slider { position: relative; }
+  .price-slider .slider-track {
+    display: flex;
+    gap: 1.25rem;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+    padding: 0.5rem 0.25rem 1rem;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+  .price-slider .slider-track::-webkit-scrollbar { display: none; }
+  .price-slider .slider-track > .price-card {
+    flex: 0 0 calc(85% - 0.625rem);
+    max-width: 360px;
+    scroll-snap-align: start;
+  }
+  @media (min-width: 640px) {
+    .price-slider .slider-track > .price-card {
+      flex: 0 0 calc(50% - 0.625rem);
+      max-width: none;
+    }
+  }
+  @media (min-width: 1024px) {
+    .price-slider .slider-track > .price-card {
+      flex: 0 0 calc(25% - 0.94rem);
+    }
+  }
+  .slider-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 48px; height: 48px;
+    background: rgba(10,10,10,0.92);
+    border: 1px solid rgba(255,255,255,0.20);
+    color: #fff;
+    display: none;
+    align-items: center; justify-content: center;
+    z-index: 5;
+    cursor: pointer;
+    transition: background .15s ease, border-color .15s ease, opacity .15s ease;
+  }
+  .slider-btn svg { width: 20px; height: 20px; }
+  .slider-btn:hover:not(:disabled) {
+    background: #1a1a1a;
+    border-color: rgba(255,255,255,0.4);
+  }
+  .slider-btn:disabled { opacity: 0.25; cursor: not-allowed; }
+  .slider-prev { left: -16px; }
+  .slider-next { right: -16px; }
+  @media (min-width: 768px) { .slider-btn { display: flex; } }
+  @media (min-width: 1280px) { .slider-prev { left: -22px; } .slider-next { right: -22px; } }
+
+  .slider-counter {
+    display: flex; justify-content: center; align-items: center; gap: 0.5rem;
+    margin-top: 1.25rem;
+    font-size: 0.78rem; color: var(--muted);
+    letter-spacing: 0.18em; text-transform: uppercase;
+  }
+  .slider-dots { display: flex; gap: 0.4rem; }
+  .slider-dot {
+    width: 8px; height: 8px; background: rgba(255,255,255,0.18);
+    cursor: pointer; transition: background .15s ease, transform .15s ease;
+    border: none; padding: 0;
+  }
+  .slider-dot.active { background: var(--grad-pink-mid); transform: scale(1.2); }
 </style>
 </head>
 
@@ -287,7 +356,14 @@
         <p class="text-center text-neutral-400 max-w-2xl mx-auto mb-12">
           Prices dependant on vehicle size and condition. All vehicles will be quoted prior to appointment.
         </p>
-        <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-5 items-stretch">
+        <div class="price-slider" id="priceSlider">
+          <button class="slider-btn slider-prev" aria-label="Previous packages" type="button">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="15 18 9 12 15 6"/></svg>
+          </button>
+          <button class="slider-btn slider-next" aria-label="Next packages" type="button">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg>
+          </button>
+          <div class="slider-track" id="priceSliderTrack">
 
           <!-- Basic Interior Clean -->
           <div id="basic-interior-clean" class="price-card scroll-mt-32">
@@ -422,6 +498,10 @@
             <a href="/contact" class="btn btn-primary w-full">Enquire now</a>
           </div>
 
+          </div>
+          <div class="slider-counter">
+            <span id="priceSliderLabel">1 / 8</span>
+          </div>
         </div>
       </div>
 
@@ -806,6 +886,45 @@
     };
     window.addEventListener('hashchange', handleHash);
     handleHash();
+  })();
+
+  // Price slider
+  (() => {
+    const slider = document.getElementById('priceSlider');
+    if (!slider) return;
+    const track = document.getElementById('priceSliderTrack');
+    const prev = slider.querySelector('.slider-prev');
+    const next = slider.querySelector('.slider-next');
+    const label = document.getElementById('priceSliderLabel');
+    const cards = () => track.querySelectorAll('.price-card');
+    const total = () => cards().length;
+
+    const cardStep = () => {
+      const card = track.querySelector('.price-card');
+      if (!card) return 320;
+      const styles = getComputedStyle(track);
+      const gap = parseFloat(styles.columnGap || styles.gap || 20);
+      return card.offsetWidth + gap;
+    };
+
+    const currentIndex = () => {
+      const step = cardStep();
+      return Math.round(track.scrollLeft / step);
+    };
+
+    const update = () => {
+      const i = currentIndex();
+      if (label) label.textContent = `${Math.min(i + 1, total())} / ${total()}`;
+      prev.disabled = track.scrollLeft <= 1;
+      next.disabled = track.scrollLeft + track.clientWidth >= track.scrollWidth - 2;
+    };
+
+    prev.addEventListener('click', () => track.scrollBy({ left: -cardStep(), behavior: 'smooth' }));
+    next.addEventListener('click', () => track.scrollBy({ left: cardStep(), behavior: 'smooth' }));
+
+    track.addEventListener('scroll', () => requestAnimationFrame(update));
+    window.addEventListener('resize', update);
+    update();
   })();
 </script>
 </body>
