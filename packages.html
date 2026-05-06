@@ -122,15 +122,17 @@
   .price-slider { position: relative; }
   .price-slider .slider-track {
     display: flex;
+    align-items: stretch;
     gap: 1.25rem;
     overflow-x: auto;
     scroll-snap-type: x mandatory;
     scroll-behavior: smooth;
     -webkit-overflow-scrolling: touch;
-    padding: 0.5rem 0.25rem 1rem;
+    padding: 1.5rem 0.25rem 1rem;
     scrollbar-width: none;
     -ms-overflow-style: none;
   }
+  .price-slider .slider-track > .price-card { height: auto; }
   .price-slider .slider-track::-webkit-scrollbar { display: none; }
   .price-slider .slider-track > .price-card {
     flex: 0 0 calc(85% - 0.625rem);
