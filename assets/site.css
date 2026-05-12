@@ -381,6 +381,66 @@
     padding-right: 2.5rem;
   }
 
+  /* Multi-select dropdown */
+  .ms-dropdown { position: relative; }
+  .ms-dropdown-btn {
+    appearance: none;
+    -webkit-appearance: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.5rem;
+    text-align: left;
+    cursor: pointer;
+    padding-right: 2.5rem;
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8' fill='none' stroke='%23525252' stroke-width='2'><polyline points='1 1.5 6 6.5 11 1.5'/></svg>");
+    background-repeat: no-repeat;
+    background-position: right 0.95rem center;
+  }
+  .ms-dropdown-label {
+    flex: 1 1 auto;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    color: #a3a3a3;
+    font-size: 0.95rem;
+    line-height: 1.4;
+  }
+  .ms-dropdown-label.has-value { color: #111; }
+  .ms-dropdown-panel {
+    position: absolute;
+    z-index: 30;
+    top: calc(100% + 4px);
+    left: 0;
+    right: 0;
+    max-height: 18rem;
+    overflow-y: auto;
+    background: #fff;
+    border: 1px solid #e5e5e5;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+    display: none;
+  }
+  .ms-dropdown.open .ms-dropdown-panel { display: block; }
+  .ms-option {
+    display: flex;
+    align-items: center;
+    gap: 0.625rem;
+    padding: 0.65rem 0.95rem;
+    cursor: pointer;
+    font-size: 0.9rem;
+    color: #111;
+    border-bottom: 1px solid #f5f5f5;
+  }
+  .ms-option:last-child { border-bottom: 0; }
+  .ms-option:hover { background: #fafafa; }
+  .ms-option input[type="checkbox"] {
+    accent-color: var(--grad-pink-mid);
+    width: 1rem;
+    height: 1rem;
+    flex-shrink: 0;
+    margin: 0;
+  }
+
   /* Brand gradient utilities */
   .brand-gradient-bg { background: var(--brand-gradient-tilt); }
   .brand-gradient-text {

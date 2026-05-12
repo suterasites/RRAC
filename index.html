@@ -538,27 +538,32 @@
             <span class="block text-xs uppercase tracking-[0.16em] text-neutral-600 mb-1.5 font-semibold">Vehicle</span>
             <input type="text" name="vehicle" class="form-input" placeholder="e.g. 2018 Mazda CX-5" />
           </label>
-          <label class="block">
-            <span class="block text-xs uppercase tracking-[0.16em] text-neutral-600 mb-1.5 font-semibold">Package</span>
-            <select name="package" class="form-input">
-              <option value="">Not sure yet</option>
-              <option>Basic Interior Clean - From $65</option>
-              <option>Basic Exterior Wash - From $65</option>
-              <option>Basic Interior &amp; Exterior - From $110</option>
-              <option>Full Interior Detail - From $150</option>
-              <option>Exterior Enhancement - From $300</option>
-              <option>Premium Exterior Enhancement - From $400</option>
-              <option>Complete Exterior Enhancement - From $1,000</option>
-              <option>Ceramic Coating - From $50</option>
-              <option>Multi Vehicle Package</option>
-              <option>Clay &amp; Seal</option>
-              <option>Subscription Detailing</option>
-              <option>Headlight Restoration (add-on)</option>
-              <option>Engine Bay Clean (add-on)</option>
-              <option>Advanced Odor Elimination (add-on)</option>
-              <option>Leather Reconditioning (add-on)</option>
-            </select>
-          </label>
+          <div class="block">
+            <span class="block text-xs uppercase tracking-[0.16em] text-neutral-600 mb-1.5 font-semibold">Packages</span>
+            <div class="ms-dropdown">
+              <button type="button" class="form-input ms-dropdown-btn">
+                <span class="ms-dropdown-label" data-placeholder="Select one or more">Select one or more</span>
+              </button>
+              <div class="ms-dropdown-panel">
+                <label class="ms-option"><input type="checkbox" value="Basic Interior Clean - From $65" />Basic Interior Clean - From $65</label>
+                <label class="ms-option"><input type="checkbox" value="Basic Exterior Wash - From $65" />Basic Exterior Wash - From $65</label>
+                <label class="ms-option"><input type="checkbox" value="Basic Interior & Exterior - From $110" />Basic Interior &amp; Exterior - From $110</label>
+                <label class="ms-option"><input type="checkbox" value="Full Interior Detail - From $150" />Full Interior Detail - From $150</label>
+                <label class="ms-option"><input type="checkbox" value="Exterior Enhancement - From $300" />Exterior Enhancement - From $300</label>
+                <label class="ms-option"><input type="checkbox" value="Premium Exterior Enhancement - From $400" />Premium Exterior Enhancement - From $400</label>
+                <label class="ms-option"><input type="checkbox" value="Complete Exterior Enhancement - From $1,000" />Complete Exterior Enhancement - From $1,000</label>
+                <label class="ms-option"><input type="checkbox" value="Ceramic Coating - From $50" />Ceramic Coating - From $50</label>
+                <label class="ms-option"><input type="checkbox" value="Multi Vehicle Package" />Multi Vehicle Package</label>
+                <label class="ms-option"><input type="checkbox" value="Clay & Seal" />Clay &amp; Seal</label>
+                <label class="ms-option"><input type="checkbox" value="Subscription Detailing" />Subscription Detailing</label>
+                <label class="ms-option"><input type="checkbox" value="Headlight Restoration (add-on)" />Headlight Restoration (add-on)</label>
+                <label class="ms-option"><input type="checkbox" value="Engine Bay Clean (add-on)" />Engine Bay Clean (add-on)</label>
+                <label class="ms-option"><input type="checkbox" value="Advanced Odor Elimination (add-on)" />Advanced Odor Elimination (add-on)</label>
+                <label class="ms-option"><input type="checkbox" value="Leather Reconditioning (add-on)" />Leather Reconditioning (add-on)</label>
+              </div>
+              <input type="hidden" name="package" class="ms-dropdown-hidden" />
+            </div>
+          </div>
         </div>
         <label class="block">
           <span class="block text-xs uppercase tracking-[0.16em] text-neutral-600 mb-1.5 font-semibold">Message</span>
