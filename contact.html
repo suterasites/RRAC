@@ -251,24 +251,18 @@
 
         <div class="grid sm:grid-cols-2 gap-4">
           <label class="block">
-            <span class="block text-xs uppercase tracking-[0.16em] text-neutral-600 mb-1.5 font-semibold">First name</span>
-            <input type="text" name="first_name" required class="form-input" placeholder="Dylan" />
+            <span class="block text-xs uppercase tracking-[0.16em] text-neutral-600 mb-1.5 font-semibold">Name</span>
+            <input type="text" name="name" required class="form-input" placeholder="Your name" />
           </label>
-          <label class="block">
-            <span class="block text-xs uppercase tracking-[0.16em] text-neutral-600 mb-1.5 font-semibold">Last name</span>
-            <input type="text" name="last_name" class="form-input" placeholder="Tanner" />
-          </label>
-        </div>
-        <div class="grid sm:grid-cols-2 gap-4">
           <label class="block">
             <span class="block text-xs uppercase tracking-[0.16em] text-neutral-600 mb-1.5 font-semibold">Phone</span>
             <input type="tel" name="phone" class="form-input" placeholder="0400 000 000" />
           </label>
-          <label class="block">
-            <span class="block text-xs uppercase tracking-[0.16em] text-neutral-600 mb-1.5 font-semibold">Email</span>
-            <input type="email" name="email" required class="form-input" placeholder="you@example.com" />
-          </label>
         </div>
+        <label class="block">
+          <span class="block text-xs uppercase tracking-[0.16em] text-neutral-600 mb-1.5 font-semibold">Email</span>
+          <input type="email" name="email" required class="form-input" placeholder="you@example.com" />
+        </label>
         <div class="grid sm:grid-cols-2 gap-4">
           <label class="block">
             <span class="block text-xs uppercase tracking-[0.16em] text-neutral-600 mb-1.5 font-semibold">Vehicle</span>
@@ -282,24 +276,20 @@
               <option>Full Interior Detail - From $150</option>
               <option>Exterior Enhancement - From $300</option>
               <option>Complete Exterior Enhancement - From $1,000</option>
-              <option>Multi Vehicle Package</option>
-              <option>Clay &amp; Seal</option>
               <option>Subscription Detailing</option>
-              <option>Headlight Restoration (add-on)</option>
-              <option>Engine Bay Clean (add-on)</option>
-              <option>Advanced Odor Elimination (add-on)</option>
-              <option>Leather Reconditioning (add-on)</option>
+              <option>Mobile Headlight Restoration</option>
             </select>
           </label>
         </div>
         <label class="block">
           <span class="block text-xs uppercase tracking-[0.16em] text-neutral-600 mb-1.5 font-semibold">Message</span>
-          <textarea name="message" rows="6" class="form-input" placeholder="Tell us about your car, when you'd like to book, and any condition notes."></textarea>
+          <textarea name="message" rows="5" class="form-input" placeholder="Tell us about your car and what you're after."></textarea>
         </label>
+        <!-- Formspree honeypot -->
         <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off" />
         <div class="pt-2">
           <button type="submit" class="btn btn-primary w-full sm:w-auto">Send enquiry</button>
-          <p class="text-xs text-neutral-500 mt-3">We respond same day, Mon to Sat. Or call <a href="tel:0449801505" class="text-neutral-900 underline">0449 801 505</a>.</p>
+          <p class="text-xs text-neutral-500 mt-3">We respond same day, Mon to Sat.</p>
         </div>
       </form>
     </div>
