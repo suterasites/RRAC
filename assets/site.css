@@ -111,10 +111,6 @@
   }
   .price-card:hover {
     transform: translateY(-3px);
-    border-color: rgba(255,255,255,0.35);
-  }
-  .price-card.featured:hover {
-    border-color: rgba(217,59,227,0.65);
   }
   .price-amount {
     font-family: 'Sora', sans-serif; font-weight: 800;
