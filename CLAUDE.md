@@ -39,6 +39,9 @@ Cranbourne North + Melbourne (mobile-capable for headlight restoration; in-shop 
 - ReviewsJet (testimonial slider on most pages)
 - Elfsight platform script
 
+### Open client tasks (handled in third-party admin, not code)
+- Elfsight Instagram feed: switch layout from 8 tiles to 6 tiles per row (Dylan feedback 2026-05-13). Edit at elfsight.com -> Instagram Feed widget -> Layout settings.
+
 ---
 
 ## Reference Source
