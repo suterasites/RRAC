@@ -69,7 +69,7 @@
   .hero-bg::before {
     content: "";
     position: absolute; inset: 0;
-    background: linear-gradient(180deg, rgba(0,0,0,0.35) 0%, rgba(0,0,0,0.65) 60%, #000 100%);
+    background: linear-gradient(180deg, rgba(0,0,0,0.10) 0%, rgba(0,0,0,0.45) 70%, #000 100%);
     z-index: 1;
   }
 
@@ -105,12 +105,17 @@
     height: 100%;
     transition: transform .25s ease, border-color .25s ease;
   }
-  .price-card.featured {
-    background: linear-gradient(180deg, #1a081c 0%, #0a0a0a 100%);
-    border-color: rgba(217,59,227,0.45);
-  }
   .price-card:hover {
     transform: translateY(-3px);
+  }
+  /* Lock the header block to a fixed height so name/From/price line up across cards */
+  .price-card > .text-center {
+    min-height: 9.5rem;
+    display: flex; flex-direction: column; justify-content: flex-end;
+  }
+  .price-card > .text-center h3 {
+    min-height: 3.2rem;
+    display: flex; align-items: center; justify-content: center;
   }
   .price-amount {
     font-family: 'Sora', sans-serif; font-weight: 800;
