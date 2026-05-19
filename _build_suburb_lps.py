@@ -129,6 +129,19 @@ HEADER = """<header class="site-header">
           </div>
         </div>
       </div>
+      <!-- Browse by service (Phase C service pages) -->
+      <div class="border-t border-white/10 mt-6 pt-5">
+        <div class="text-xs uppercase tracking-[0.18em] text-neutral-400 mb-4">Or browse by service</div>
+        <div class="flex flex-wrap gap-2">
+          <a href="/ceramic-coating" class="inline-flex items-center px-3.5 py-2 border border-white/15 text-white text-xs uppercase tracking-[0.14em] font-semibold hover:bg-white/5 hover:border-white/30 transition">Ceramic Coating</a>
+          <a href="/paint-correction" class="inline-flex items-center px-3.5 py-2 border border-white/15 text-white text-xs uppercase tracking-[0.14em] font-semibold hover:bg-white/5 hover:border-white/30 transition">Paint Correction</a>
+          <a href="/pre-sale-detail" class="inline-flex items-center px-3.5 py-2 border border-white/15 text-white text-xs uppercase tracking-[0.14em] font-semibold hover:bg-white/5 hover:border-white/30 transition">Pre-Sale Detail</a>
+          <a href="/headlight-restoration" class="inline-flex items-center px-3.5 py-2 border border-white/15 text-white text-xs uppercase tracking-[0.14em] font-semibold hover:bg-white/5 hover:border-white/30 transition">Headlight Restoration</a>
+          <a href="/leather-reconditioning" class="inline-flex items-center px-3.5 py-2 border border-white/15 text-white text-xs uppercase tracking-[0.14em] font-semibold hover:bg-white/5 hover:border-white/30 transition">Leather Reconditioning</a>
+          <a href="/engine-bay-clean" class="inline-flex items-center px-3.5 py-2 border border-white/15 text-white text-xs uppercase tracking-[0.14em] font-semibold hover:bg-white/5 hover:border-white/30 transition">Engine Bay Clean</a>
+          <a href="/advanced-odor-elimination" class="inline-flex items-center px-3.5 py-2 border border-white/15 text-white text-xs uppercase tracking-[0.14em] font-semibold hover:bg-white/5 hover:border-white/30 transition">Odor Elimination</a>
+        </div>
+      </div>
       <div class="mega-foot mt-5">
         <span class="text-neutral-400">Not sure which one? Tell us about your car and we'll recommend.</span>
         <div class="flex items-center gap-3">
@@ -152,6 +165,15 @@ HEADER = """<header class="site-header">
           <a href="/packages#exterior" class="text-neutral-400 hover:text-white">Paint Enhancement - From $300</a>
           <a href="/packages#complete" class="text-neutral-400 hover:text-white">Correction &amp; Coating - From $1,000</a>
           <a href="/packages" class="text-white font-semibold mt-1">View all packages -&gt;</a>
+          <div class="border-t border-white/10 my-2"></div>
+          <div class="text-xs uppercase tracking-[0.16em] text-neutral-500 font-semibold pb-1">By service</div>
+          <a href="/ceramic-coating" class="text-neutral-400 hover:text-white">Ceramic Coating</a>
+          <a href="/paint-correction" class="text-neutral-400 hover:text-white">Paint Correction</a>
+          <a href="/pre-sale-detail" class="text-neutral-400 hover:text-white">Pre-Sale Detail</a>
+          <a href="/headlight-restoration" class="text-neutral-400 hover:text-white">Headlight Restoration</a>
+          <a href="/leather-reconditioning" class="text-neutral-400 hover:text-white">Leather Reconditioning</a>
+          <a href="/engine-bay-clean" class="text-neutral-400 hover:text-white">Engine Bay Clean</a>
+          <a href="/advanced-odor-elimination" class="text-neutral-400 hover:text-white">Odor Elimination</a>
         </div>
       </details>
       <a href="/our-work" class="nav-link py-2">Our Work</a>
@@ -1097,6 +1119,1035 @@ def build_page(page):
 """
 
 
+# ============================================================
+# PHASE C - SERVICE HUB PAGES (Melbourne-wide)
+# ============================================================
+# One per service. Hand-built /ceramic-coating.html is the pattern-setter (C2).
+# This script generates C3-C8.
+
+SERVICE_HUBS = [
+    {
+        # C3 - Paint Correction (Melbourne-wide hub)
+        "slug": "paint-correction",
+        "label": "Paint Correction",
+        "service_type_schema": "Paint Correction",
+        "title": "Paint Correction Melbourne | Radiant Rides AutoCare",
+        "description": "Professional paint correction in Melbourne. Swirl removal, machine polish, and clear-coat restoration at our Cranbourne North studio. From $300.",
+        "og_description": "Machine polishing and swirl removal at our Cranbourne North studio. Single-stage enhancement through to full two-stage correction.",
+        "hero_image": "brand_assets/bmw-exterior-02.jpeg",
+        "hero_subhead": "Swirl removal, machine polish, and clear-coat restoration. All work in our Cranbourne North studio.",
+        "intro_h2": "Long-haul gloss, properly restored",
+        "intro_paragraphs": [
+            "Paint correction is the multi-stage machine polishing process that removes the swirl marks, holograms, water spots and light scratches that build up in clear coat over time. Done right, it brings back the depth and gloss that washing alone can't restore.",
+            "Most cars in Melbourne pick up a layer of micro-defects within the first two or three years. Sponge washes, automatic brush washes, dust on a dry car wiped with a microfibre, the wrong drying technique - all of it leaves marks. They're invisible in overcast light. In direct sun they show up as a haze and a spider-web pattern across the bonnet, roof and boot lid.",
+            "We run three tiers of correction. A single-stage Paint Enhancement removes the light stuff. A full Paint Correction tackles deeper swirls and holograms. Correction &amp; Coating bundles the correction with a multi-year ceramic so the freshly corrected paint gets locked in. Right tier depends on the car and the condition.",
+            "All correction work happens at our Cranbourne North studio. Machine polishing needs controlled lighting to see defects properly, which is why this isn't a service we do mobile. The studio is within a 20-minute drive of Berwick, Narre Warren, Cranbourne, Clyde North, Pakenham, Beaconsfield, Officer and Frankston.",
+        ],
+        "at_a_glance_label": "Paint correction, Radiant Rides",
+        "at_a_glance_rows": [
+            ("Studio", "Cranbourne North, VIC"),
+            ("Tiers", "3 (enhancement / correction / full)"),
+            ("From", "$300 (Paint Enhancement)"),
+            ("Full correction + coating", "From $1,000"),
+            ("Turnaround", "1 to 2 days"),
+            ("Booking", "Drop-off in studio"),
+        ],
+        "what_it_does_intro": "Correction isn't a wax or a one-pass polish. It's a controlled removal of damaged clear coat to reveal flat, defect-free paint underneath. Four specific outcomes.",
+        "what_it_does_cards": [
+            ("Removes swirl marks", "Years of incorrect washing (drive-through brushes, dry rags, paper towels) leave fine circular scratches in the clear coat. Correction levels them out."),
+            ("Restores depth and clarity", "Once the micro-scratches are gone, light bounces back cleanly. The colour underneath looks darker, the metallic flake pops, the gloss is back."),
+            ("Preps for ceramic coating", "Coating locks in whatever is on the paint at the time of application. Correction is what gets the paint right before that lock-in happens."),
+            ("True cut and polish", "Two-stage cut and polish removes deeper defects then refines the finish, rather than glazing over the damage with fillers."),
+        ],
+        "tiers_h2": "Three correction tiers",
+        "tiers_intro": "From a single-stage enhancement to a full two-stage cut and polish with ceramic. We assess the paint and recommend the tier that fits the condition.",
+        "tiers": [
+            {
+                "name": "Paint Enhancement",
+                "price": "$300",
+                "primary": False,
+                "features": [
+                    "Pre-foam and decontamination wash",
+                    "Clay bar removes bonded contamination",
+                    "Single stage machine polish",
+                    "Removes light swirls and oxidation",
+                    "Spray wax or ceramic sealant finish",
+                ],
+            },
+            {
+                "name": "Paint Correction",
+                "price": "$400",
+                "primary": True,
+                "features": [
+                    "Full decontamination prep",
+                    "Targeted multi-pass correction",
+                    "Removes deeper swirls and holograms",
+                    "Brings back depth and gloss",
+                    "Protected with sealant finish",
+                ],
+            },
+            {
+                "name": "Correction &amp; Coating",
+                "price": "$1,000",
+                "primary": True,
+                "features": [
+                    "Full paint correction included",
+                    "Two-stage cut and polish",
+                    "Multi-year ceramic coating applied",
+                    "Long-haul protection on freshly corrected paint",
+                    "Best fit for resale or long-hold ownership",
+                ],
+            },
+        ],
+        "suitable_for_h2": "Cars that earn back the correction spend",
+        "suitable_for_intro": "Paint correction pays off most on these ownership patterns.",
+        "suitable_for_cards": [
+            ("Daily-driven swirled paint", "Cars three years and older with visible swirl marks in direct sun. Correction returns the finish closer to factory than you'd think possible."),
+            ("Pre-coating prep", "About to apply ceramic? Correction comes first. The coating bonds to whatever is on the paint, so you want that surface defect-free."),
+            ("Resale prep", "A corrected finish reads as 'looked after' on a test drive and supports the asking price. Especially true above $30k."),
+            ("Dark-coloured cars", "Black, dark blue, deep red. Swirls show worst on dark paint and correction has the most visible impact."),
+            ("Performance and prestige", "Cars where the paint is part of the appeal. European metallic finishes, sports cars driven hard, classic restorations."),
+            ("Post-repaint correction", "Paint just back from panel beaters? Even good shops leave fine machine marks. A correction pass refines that finish before you take delivery."),
+        ],
+        "maintenance_h2": "After the correction",
+        "maintenance_subhead": "Correction restores the finish. How you wash it from here decides how long the result lasts.",
+        "maintenance_blocks": [
+            {
+                "h3": "First week",
+                "items": [
+                    "Avoid the first automatic brush wash for the rest of the car's life.",
+                    "Light hand wash only for the first week.",
+                    "If you've also coated, follow the ceramic cure guidance.",
+                    "Park indoors or covered where possible while the sealant cures.",
+                ],
+            },
+            {
+                "h3": "Ongoing maintenance",
+                "items": [
+                    "Two-bucket hand wash with pH-neutral shampoo. Twice a month is plenty.",
+                    "No automatic brush washes. They are the leading cause of new swirls.",
+                    "Microfibre drying towel, not paper or hose-dry.",
+                    "Yearly check-in detail keeps the finish where we left it.",
+                ],
+            },
+        ],
+        "suburb_cross_links": [
+            ("Paint Correction Berwick", "Berwick paint correction at our Cranbourne North studio. 12 min drive via M1.", "/paint-correction-berwick"),
+            ("Paint Correction Clyde North", "Defect-free paint for the Clyde North growth corridor. 8 min drive.", "/paint-correction-clyde-north"),
+        ],
+        "faq": [
+            ("What is paint correction?", "It's a controlled machine-led process that removes a thin layer of damaged clear coat to reveal a flat, defect-free surface underneath. Done right, it brings back the depth and gloss that washing alone can't restore."),
+            ("Do I need full correction or just enhancement?", "Most daily drivers with swirl marks and dull paint do well with Paint Enhancement. Cars with deeper scratches, holograms from a prior bad polish, or paint that's been neglected for years need full Paint Correction. We assess and quote after seeing the car."),
+            ("How long does correction take?", "Paint Enhancement is typically a single day. Full Paint Correction is one to two days. Correction &amp; Coating runs one to two days depending on size and condition. We confirm timelines when we quote."),
+            ("Will correction damage the clear coat?", "No, when it's done correctly with the right pads, compounds and machine technique. We measure paint thickness on jobs that require deeper correction so we stay well within safe tolerance."),
+            ("Will the swirls come back?", "Not if you wash the car correctly. The leading cause of new swirls is automatic brush washes and dry-wiping with the wrong cloth. Two-bucket hand wash with pH-neutral shampoo is the rule."),
+            ("Should I correct before applying ceramic?", "Yes. Ceramic coating locks in whatever is on the paint at the time of application, including swirl marks. Correction gets the surface right before the coating goes down."),
+            ("Are you mobile? Can you come to me?", "No. Paint correction requires controlled studio lighting to see defects properly during the work. All correction is carried out at our Cranbourne North studio. We do offer <strong>mobile headlight restoration</strong> as a separate add-on."),
+            ("How much does paint correction cost in Melbourne?", "From $300 for Paint Enhancement, from $400 for full Paint Correction, from $1,000 for Correction &amp; Coating with multi-year ceramic. Final pricing depends on vehicle size and current paint condition, quoted after we see the car."),
+        ],
+        "schema_offers": [
+            ("Paint Enhancement", "Single-stage machine polish with decontamination prep. Removes light swirls and oxidation."),
+            ("Paint Correction", "Multi-pass correction that removes deeper swirls and holograms, restoring depth and gloss."),
+            ("Correction & Coating", "Full two-stage cut and polish with multi-year ceramic coating applied."),
+        ],
+        "tier_select_options": [
+            "Paint Enhancement - From $300",
+            "Paint Correction - From $400",
+            "Correction & Coating - From $1,000",
+            "Not sure - recommend",
+        ],
+        "service_interest": "Paint Correction",
+        "form_subject": "New paint correction enquiry from radiantridesautocare.com.au",
+        "cta_h2": "Ready to restore your paint?",
+        "cta_body": "Tell us about your vehicle and current paint condition. We'll come back within 24 hours with a fixed Melbourne quote.",
+    },
+    {
+        # C4 - Headlight Restoration (mobile-capable add-on)
+        "slug": "headlight-restoration",
+        "label": "Headlight Restoration",
+        "service_type_schema": "Headlight Restoration",
+        "title": "Headlight Restoration Melbourne | Mobile Service | Radiant Rides AutoCare",
+        "description": "Mobile headlight restoration across Melbourne. Yellowed, foggy or oxidised lenses restored to clear at your address or in our Cranbourne North studio. Quoted per vehicle.",
+        "og_description": "Mobile or in-studio. We restore yellowed, foggy headlights back to clear and seal them against re-oxidation.",
+        "hero_image": "brand_assets/blue-car-tail-light.jpeg",
+        "hero_subhead": "Yellowed, foggy headlights restored to clear. Mobile across Melbourne or in our Cranbourne North studio.",
+        "intro_h2": "Mobile or in-studio headlight restoration",
+        "intro_paragraphs": [
+            "Headlight Restoration is the one service we do offer mobile. We come to your driveway or workplace anywhere across Melbourne and restore foggy, yellowed or oxidised plastic headlight lenses back to clear. Or, if you'd rather bring the car to us, we do the same job in our Cranbourne North studio.",
+            "Plastic headlight lenses oxidise from UV exposure. The factory clear coating breaks down over five to ten years, the surface gets a yellow haze, light output drops noticeably, and the car looks older than it is. It's also a roadworthy issue on cars due for inspection. Restoration sands the oxidised layer off, polishes the lens back to clarity, and applies a UV-resistant sealant so it stays clear longer.",
+            "Most cars are an hour or so per pair of headlights. We finish with a UV-resistant sealant that's the difference between a six-month fix and a result that holds for two-plus years. Done properly, it's the cheapest visible upgrade you can put on an older car.",
+            "Starting from $50, with final pricing depending on the size of the lens, the level of oxidation, and whether you book mobile (call-out fee applies) or in-studio.",
+        ],
+        "at_a_glance_label": "Headlight restoration",
+        "at_a_glance_rows": [
+            ("Mode", "Mobile or in-studio"),
+            ("Service area", "Melbourne (mobile)"),
+            ("Time", "~1 hour per pair"),
+            ("Finish", "UV-resistant sealant"),
+            ("Longevity", "2+ years with sealant"),
+            ("From", "$50 (mobile bookings add call-out fee)"),
+        ],
+        "what_it_does_intro": "Restoration is a four-step process that gets foggy plastic lenses back to clear and keeps them clear.",
+        "what_it_does_cards": [
+            ("Removes oxidised layer", "We wet-sand the yellowed, oxidised top layer off the plastic lens. This is the step most DIY kits skip or under-do."),
+            ("Polishes back to clarity", "Progressive polishing compounds bring the lens back to optical clarity. Light output recovers. The car instantly looks newer."),
+            ("Seals against UV", "A UV-resistant sealant locks in the result. Without this, the oxidation comes back within months. With it, you get years of clear."),
+            ("Mobile-friendly", "Headlight restoration is the only service we do mobile. We bring everything to your driveway. Call-out fee applies."),
+        ],
+        "tiers_h2": "Single service, quoted per vehicle",
+        "tiers_intro": "Headlight restoration starts from $50 per vehicle. Final pricing depends on lens size, oxidation level, and whether you book mobile (call-out fee) or in-studio.",
+        "tiers": [
+            {
+                "name": "Headlight Restoration",
+                "price": "$50",
+                "primary": True,
+                "features": [
+                    "Wet-sand oxidised layer off the lens",
+                    "Progressive polish back to optical clarity",
+                    "UV-resistant sealant applied",
+                    "Mobile (call-out fee) or in-studio",
+                    "Both lenses included as standard pricing",
+                    "~1 hour total per pair",
+                ],
+            },
+        ],
+        "suitable_for_h2": "When to book a restoration",
+        "suitable_for_intro": "Headlight restoration earns its keep on specific patterns.",
+        "suitable_for_cards": [
+            ("Visibly yellowed lenses", "If the plastic looks hazy, milky or yellow in daylight, the oxidation is well underway. Restoration is the fix."),
+            ("Reduced night-vision output", "Oxidised lenses scatter light. If your high-beam pattern looks weaker than it should, the lens is the most likely cause."),
+            ("Cars 5+ years old", "Factory clear coatings start breaking down around year five to seven. Most cars in that age range benefit visibly."),
+            ("Pre-sale prep", "A car for sale with foggy headlights reads as neglected. A restored pair makes the whole front of the car look fresher in photos."),
+            ("Pre-roadworthy inspection", "Restoring lenses ahead of a roadworthy check avoids a fail mark on light output."),
+            ("Mobile booking by appointment", "Can't drop the car off? We come to you anywhere in Melbourne with the call-out fee added."),
+        ],
+        "suburb_cross_links": [],
+        "service_area_chips": [
+            "Cranbourne North", "Cranbourne", "Berwick", "Narre Warren", "Pakenham", "Frankston",
+            "Dandenong", "Hampton Park", "Clyde North", "Hallam", "Endeavour Hills", "Beaconsfield",
+        ],
+        "faq": [
+            ("Do you do mobile headlight restoration?", "Yes. Headlight restoration is the only service we offer mobile. We come to you anywhere in Melbourne. A call-out fee applies. Bookings by appointment."),
+            ("How long does a restoration take?", "Around an hour per pair of headlights once we're on site. Allow some setup and curing time around that."),
+            ("How long does the result last?", "With our UV-resistant sealant, two-plus years is normal. Without a sealant (typical of cheap kits), the haze can return in months."),
+            ("Can you fix lenses that are deeply cracked?", "No. Restoration fixes oxidation and surface haze. Deep cracks, impact damage or scoring through the plastic require lens replacement, which is a different repair."),
+            ("How much does it cost?", "Starts from $50 per vehicle. Final pricing depends on lens size, level of oxidation, and whether you book mobile or in-studio. Mobile bookings include a call-out fee on top of the base price."),
+            ("Is it worth it on an older car?", "Yes. Headlight restoration is one of the highest-visible-impact services we do per dollar spent. An older car can look five years younger from the front the same day."),
+            ("Will it pass a roadworthy after restoration?", "If the lens itself isn't damaged, restoration plus sealant typically restores the lens back to roadworthy light output. If the failure is from damage rather than haze, replacement is the fix."),
+            ("Can I book this with another detail at the studio?", "Yes. Headlight restoration is a popular add-on to any in-studio detail booking. Mention it on the enquiry and we'll include it in the time-block."),
+        ],
+        "schema_offers": [
+            ("Headlight Restoration", "Mobile or in-studio. Wet-sand, polish and UV-sealant on yellowed plastic headlight lenses. Pricing quoted per vehicle."),
+        ],
+        "tier_select_options": [
+            "Headlight Restoration - In-studio (From $50)",
+            "Headlight Restoration - Mobile (From $50 + call-out fee)",
+            "Not sure - recommend",
+        ],
+        "service_interest": "Headlight Restoration",
+        "form_subject": "New headlight restoration enquiry from radiantridesautocare.com.au",
+        "cta_h2": "Ready to clear those lenses?",
+        "cta_body": "Tell us the car make and model and where you'd like us to do the job. We'll come back within 24 hours with a quote.",
+    },
+    {
+        # C5 - Engine Bay Clean (add-on)
+        "slug": "engine-bay-clean",
+        "label": "Engine Bay Clean",
+        "service_type_schema": "Engine Bay Detailing",
+        "title": "Engine Bay Cleaning Melbourne | Radiant Rides AutoCare",
+        "description": "Professional engine bay cleaning at our Cranbourne North studio. Safe degrease, dressed plastics, and a showroom-clean bay. Quoted per vehicle.",
+        "og_description": "Safe engine bay degrease and dress at our Cranbourne North studio. Bookable add-on to any detail.",
+        "hero_image": "brand_assets/foam-wash-4wd.jpeg",
+        "hero_subhead": "Safe degrease and full dress of your engine bay. Bookable as an add-on at our Cranbourne North studio.",
+        "intro_h2": "Engine bay cleaning, done safely",
+        "intro_paragraphs": [
+            "Engine bays collect grime fast. Oil residue, road dust, leaf litter, and the slow build-up that turns black plastic grey and metal surfaces dull. Most owners never touch the bay because the wrong approach can damage electronics, fuses or sensors. Done properly, it's one of the highest-impact details you can do to a car.",
+            "We use a controlled approach: covers on the electrical components, the right degreaser for plastic and metal surfaces, low-pressure rinse rather than blast wash, and a finishing dress on the plastics so the bay holds the clean look. The whole bay comes back closer to showroom than you'd expect.",
+            "Engine Bay Clean works best as an add-on to a Paint Enhancement or full detail booking. We're already set up, the time is incremental, and the car comes back finished top-to-bottom. We also do it as a standalone for cars about to be sold or going to a car show.",
+            "Starts from $30 as an add-on to a detail booking, with final pricing depending on the size of the bay, the level of buildup, and whether it's standalone or paired.",
+        ],
+        "at_a_glance_label": "Engine bay clean",
+        "at_a_glance_rows": [
+            ("Studio", "Cranbourne North, VIC"),
+            ("Mode", "In-studio only"),
+            ("Add-on to", "Any detail or standalone"),
+            ("Best paired with", "Pre Sale Detail or Paint Enhancement"),
+            ("From", "$30 (add-on to a detail booking)"),
+            ("Time", "Add ~1 hour to a detail booking"),
+        ],
+        "what_it_does_intro": "Engine bay cleaning isn't just degrease and rinse. Four specific steps make the difference between a clean bay and a damaged one.",
+        "what_it_does_cards": [
+            ("Electrical protection first", "We cover sensitive components - fuse box, alternator, intake, ECU - before any water touches the bay. This is the step that separates a safe clean from an expensive mistake."),
+            ("Controlled degrease", "The right degreaser for plastic vs metal. Applied with brushes, not pressure-sprayed at electrical seals. Lifted with a low-pressure rinse."),
+            ("Plastic and rubber dress", "Once the bay is clean and dry, we dress the plastics and rubber so the finish holds. Black plastic looks like black plastic again, not faded grey."),
+            ("Final wipe-down", "Metal surfaces, battery casing, intake tube, hose runs - all wiped clean. The bay looks the way it did the day it left the factory."),
+        ],
+        "tiers_h2": "Single service, quoted per vehicle",
+        "tiers_intro": "Engine bay clean starts from $30 as an add-on to a detail booking. Standalone or larger bays are quoted on enquiry.",
+        "tiers": [
+            {
+                "name": "Engine Bay Clean",
+                "price": "$30",
+                "primary": True,
+                "features": [
+                    "Electrical components covered before clean",
+                    "Controlled degrease on plastic and metal",
+                    "Low-pressure rinse, no blast spray near electrics",
+                    "Plastic and rubber dressed for hold",
+                    "Final metal and surface wipe-down",
+                    "Add-on to any detail, or standalone",
+                ],
+            },
+        ],
+        "suitable_for_h2": "When to book an engine bay clean",
+        "suitable_for_intro": "Engine bay cleaning makes the most visible difference on these patterns.",
+        "suitable_for_cards": [
+            ("Pre-sale prep", "Buyers open the bonnet. A clean bay reads as 'looked after' and supports the asking price."),
+            ("Car shows", "Show judges and Instagram both check under the bonnet. Engine bay clean is non-negotiable show prep."),
+            ("Long-hold maintenance", "Once a year, paired with another detail. Catches the grime before it bakes on and corrodes plastics."),
+            ("Recently serviced cars", "After major service work, the bay often has fingerprints, oil drips, and disturbed dirt. Cleanup makes the service work look complete."),
+            ("Newly bought used cars", "Resetting a bay to clean lets you see leaks early, makes future maintenance easier, and starts ownership from a known baseline."),
+            ("Bonded as a Paint Enhancement add-on", "Most common booking pattern. The car is already in-studio for a paint job, so the bay is incremental time and finishes the whole car."),
+        ],
+        "suburb_cross_links": [],
+        "service_area_chips": [
+            "Cranbourne North", "Cranbourne", "Berwick", "Narre Warren", "Pakenham", "Frankston",
+            "Dandenong", "Hampton Park", "Clyde North", "Hallam", "Endeavour Hills", "Beaconsfield",
+        ],
+        "faq": [
+            ("Is engine bay cleaning safe for electronics?", "Yes, when done properly. We cover sensitive components, use the right products, and never blast-pressure-wash near electrical seals. The vast majority of horror stories come from DIY pressure-washing without proper prep."),
+            ("Can I do this on a modern hybrid or EV?", "Yes, with extra caution and the right protection on the high-voltage components. Mention the car type on enquiry and we'll confirm what we can and can't do safely."),
+            ("How often should I have the bay cleaned?", "Once a year is plenty for most cars. Show cars or pre-sale prep can be done as one-offs. Daily drivers don't need it more often than the annual detail."),
+            ("Is it just degrease and rinse?", "No. The clean is one step. Drying, dressing the plastics, and wiping down the metal surfaces is what makes the result look finished. Skipping those leaves the bay looking damp and patchy."),
+            ("Will the result last?", "Months on a daily driver, longer on a car that's garaged. Dressing the plastics is the step that extends the look. Without it, the plastics start fading back within weeks."),
+            ("Can you do it as a standalone or only as an add-on?", "Both. The most common booking is as an add-on to a Paint Enhancement, but we'll do it as a standalone for pre-sale prep or show prep."),
+            ("Are you mobile?", "No. Engine bay cleaning is in-studio only. The controlled environment matters for electrical safety and water management."),
+            ("How much does it cost?", "Starts from $30 as an add-on to a detail booking. Final pricing depends on bay size, level of buildup, and whether it's standalone or paired with a detail. Quoted per vehicle on enquiry."),
+        ],
+        "schema_offers": [
+            ("Engine Bay Clean", "Professional in-studio engine bay degrease, protection of electrical components, and plastic/rubber dress. Quoted per vehicle."),
+        ],
+        "tier_select_options": [
+            "Engine Bay Clean - Standalone",
+            "Engine Bay Clean - Add-on to detail booking",
+            "Not sure - recommend",
+        ],
+        "service_interest": "Engine Bay Clean",
+        "form_subject": "New engine bay clean enquiry from radiantridesautocare.com.au",
+        "cta_h2": "Ready to clean up under the bonnet?",
+        "cta_body": "Tell us about your car and whether you'd like the bay cleaned as an add-on or a standalone booking. We'll come back within 24 hours with a quote.",
+    },
+    {
+        # C6 - Leather Reconditioning (add-on)
+        "slug": "leather-reconditioning",
+        "label": "Leather Reconditioning",
+        "service_type_schema": "Leather Reconditioning",
+        "title": "Leather Reconditioning Melbourne | Radiant Rides AutoCare",
+        "description": "Professional leather seat reconditioning at our Cranbourne North studio. Deep clean, condition, and protect tired or dry leather interiors. Quoted per vehicle.",
+        "og_description": "Deep clean and condition tired leather seats and trim. In-studio at Cranbourne North.",
+        "hero_image": "brand_assets/bmw-m-interior-front.jpeg",
+        "hero_subhead": "Deep clean, conditioning and protection for tired or dry leather interiors. In-studio at Cranbourne North.",
+        "intro_h2": "Leather brought back, not just wiped down",
+        "intro_paragraphs": [
+            "Leather seats are a high-touch surface that age fast if they're not looked after. Years of sweat, oils, sunscreen, denim transfer, and Melbourne sun dries the leather, cracks the finish, and embeds dirt deep in the pores. A wipe-down doesn't fix that. Reconditioning does.",
+            "Our leather reconditioning is a multi-step process. We deep-clean to lift dirt out of the pores, treat the dyed finish where it's worn or faded, condition the leather to restore suppleness, and seal it with a UV-resistant protectant. The seats come back closer to new than most owners think possible.",
+            "Best fit is luxury and prestige interiors where the leather is the differentiator, daily-driven cars with years of accumulated wear, or pre-sale prep where tired seats are knocking value off the asking price.",
+            "Starts from $75, with final pricing depending on the number of seats, the size of the interior, the leather condition, and whether you book it as a standalone or add-on.",
+        ],
+        "at_a_glance_label": "Leather reconditioning",
+        "at_a_glance_rows": [
+            ("Studio", "Cranbourne North, VIC"),
+            ("Mode", "In-studio only"),
+            ("Scope", "Single seat, full front, or full interior"),
+            ("Add-on to", "Interior Reset or standalone"),
+            ("From", "$75"),
+            ("Time", "Half to full day depending on scope"),
+        ],
+        "what_it_does_intro": "Reconditioning is four stages. Each one matters, and the order matters too.",
+        "what_it_does_cards": [
+            ("Deep pore clean", "We lift years of embedded dirt, oil and dye transfer out of the leather pores using leather-safe cleaners and controlled agitation. Cleaning before conditioning is non-negotiable."),
+            ("Finish treatment", "Where the dye coating has worn or scuffed, we touch up the finish. The seats look uniform again, not patchy."),
+            ("Conditioning", "Leather is skin. It needs moisture. We work in a leather-specific conditioner that restores suppleness, prevents cracking, and brings back the natural sheen."),
+            ("UV protectant", "A finishing sealant slows future drying and fading from Melbourne sun. Reconditioning lasts longer with the seal than without."),
+        ],
+        "tiers_h2": "Single service, quoted per vehicle",
+        "tiers_intro": "Leather reconditioning starts from $75. Final pricing depends on scope (single seat, front seats, or full interior) and the current condition.",
+        "tiers": [
+            {
+                "name": "Leather Reconditioning",
+                "price": "$75",
+                "primary": True,
+                "features": [
+                    "Deep pore clean to lift embedded dirt and oils",
+                    "Finish touch-up on worn or scuffed dye",
+                    "Leather-specific conditioner restores suppleness",
+                    "UV-resistant sealant slows future drying",
+                    "Single seat, front pair, or full interior",
+                    "Add-on to Interior Reset or standalone",
+                ],
+            },
+        ],
+        "suitable_for_h2": "When leather reconditioning pays off",
+        "suitable_for_intro": "Reconditioning is the highest-impact interior service per dollar on cars with these patterns.",
+        "suitable_for_cards": [
+            ("Prestige and luxury interiors", "European leather is the reason you bought the car. Reconditioning preserves that feel for years longer than just vacuuming."),
+            ("Daily drivers 4+ years old", "Wear shows fastest on the driver's bolster and the centre seat cushion. Annual reconditioning keeps the rest of the seat from catching up."),
+            ("Pre-sale prep", "Tired leather is one of the first things a buyer notices. Reconditioning fixes the visible damage and supports the asking price."),
+            ("Light-coloured leather", "Cream, tan, beige interiors show dirt and dye transfer worst. Reconditioning resets the colour back to factory."),
+            ("Cars driven in workwear", "Denim transfers blue dye onto light leather. Trades workwear leaves marks. Reconditioning cleans the transfer out properly."),
+            ("Long-hold ownership", "Annual reconditioning at the same time as your interior detail keeps the interior ageing at half the rate it otherwise would."),
+        ],
+        "suburb_cross_links": [],
+        "service_area_chips": [
+            "Cranbourne North", "Cranbourne", "Berwick", "Narre Warren", "Pakenham", "Frankston",
+            "Dandenong", "Hampton Park", "Clyde North", "Hallam", "Endeavour Hills", "Beaconsfield",
+        ],
+        "faq": [
+            ("Will this fix deep cracks in old leather?", "Reconditioning won't make deep structural cracks disappear. It will dramatically slow further cracking and restore colour and suppleness around the existing damage. Severely damaged leather needs full repair, which is a different specialty."),
+            ("Can you do just the driver's seat?", "Yes. Driver-only reconditioning is a common booking because the driver's seat ages two to three times faster than the rest of the interior."),
+            ("How long does it last?", "Twelve months between full reconditionings is typical for daily-driven cars. Garaged cars and lightly driven cars can stretch further. Our UV sealant is the main reason the result holds."),
+            ("Does it work on perforated leather?", "Yes, with extra care during the clean step so cleaner doesn't pool in the perforations. We've done plenty of perforated sports seats."),
+            ("What about leather trim on doors and dash?", "Same process. Door cards and dash leather often need it more than the seats themselves because they get direct sun all day."),
+            ("Are you mobile?", "No. Leather reconditioning is in-studio only. The controlled environment matters for cleaner application, conditioner cure time, and avoiding cross-contamination with other surfaces."),
+            ("Can I book this as an add-on to a regular detail?", "Yes. Reconditioning pairs naturally with our Interior Reset &amp; Protection package - the seats are already out of the way and we're already set up. Mention it on the enquiry."),
+            ("How much does it cost?", "Starts from $75. Final pricing depends on scope (single seat, front pair, full interior) and the current leather condition. Quoted per vehicle on enquiry."),
+        ],
+        "schema_offers": [
+            ("Leather Reconditioning", "Deep clean, finish touch-up, conditioning and UV-resistant sealant on leather seats and trim. In-studio. Quoted per vehicle."),
+        ],
+        "tier_select_options": [
+            "Leather Reconditioning - Single seat",
+            "Leather Reconditioning - Front seats",
+            "Leather Reconditioning - Full interior",
+            "Not sure - recommend",
+        ],
+        "service_interest": "Leather Reconditioning",
+        "form_subject": "New leather reconditioning enquiry from radiantridesautocare.com.au",
+        "cta_h2": "Ready to bring the leather back?",
+        "cta_body": "Tell us about your car, the leather colour, and the scope you're after. We'll come back within 24 hours with a quote.",
+    },
+    {
+        # C7 - Advanced Odor Elimination (add-on, differentiator)
+        "slug": "advanced-odor-elimination",
+        "label": "Advanced Odor Elimination",
+        "service_type_schema": "Odor Elimination Treatment",
+        "title": "Advanced Odor Elimination Melbourne | Radiant Rides AutoCare",
+        "description": "Professional odor elimination for cars in Melbourne. Smoke, pet, food and chemical odors removed at source - not masked. In-studio at Cranbourne North.",
+        "og_description": "Source-removal odor treatment for smoke, pet, food and chemical smells. In-studio at Cranbourne North.",
+        "hero_image": "brand_assets/bmw-x5-interior-passenger.jpeg",
+        "hero_subhead": "Smoke, pet, food and chemical odors removed at source. Not masked. In-studio at Cranbourne North.",
+        "intro_h2": "Odor elimination that actually works",
+        "intro_paragraphs": [
+            "Most odor 'treatments' are just stronger scents layered over the underlying smell. The fragrance fades in days and the original odor comes back. Real odor elimination has to remove the source - the molecules embedded in carpet, upholstery, headlining, vents and door cards - not cover them.",
+            "Our Advanced Odor Elimination Treatment is one of the differentiators we offer that few Melbourne detailers list explicitly. Source removal where possible, deep extraction from soft surfaces, treatment of the air-conditioning system that's been recirculating the smell, and a neutralising agent that breaks down the remaining molecules rather than masking them.",
+            "Most cars need a single treatment. Heavy cases - long-term smokers, accidents involving food, pet incidents - sometimes need a second pass and we'll be straight about that on enquiry rather than overpromise.",
+            "Starts from $120 per treatment. Final pricing depends on severity, source, and whether multiple treatments are likely. We're always straight up front about borderline cases.",
+        ],
+        "at_a_glance_label": "Advanced odor elimination",
+        "at_a_glance_rows": [
+            ("Studio", "Cranbourne North, VIC"),
+            ("Approach", "Source removal, not masking"),
+            ("Common sources", "Smoke, pet, food, chemical"),
+            ("Treatments", "Typically 1, sometimes 2 for heavy cases"),
+            ("From", "$120"),
+            ("Time", "Half to full day"),
+        ],
+        "what_it_does_intro": "Real odor elimination is a four-step process. Skipping any one of them is why most 'odor treatments' fail.",
+        "what_it_does_cards": [
+            ("Source removal", "First, we find and remove the source where possible. Spilled food, embedded debris, pet hair packed into vents. You can't deodorise around something that's still there."),
+            ("Deep extraction", "Hot-water extraction on carpets and upholstery pulls molecules out of soft surfaces where odor lives. This is the step that pet and smoke cases hinge on."),
+            ("HVAC treatment", "The air-conditioning system recirculates and concentrates smells. We treat the evaporator and vents directly, not just the cabin air."),
+            ("Neutralising treatment", "A finishing treatment that breaks down remaining odor molecules at a chemical level rather than masking them with fragrance. The car comes back smelling like nothing, not like a stronger scent."),
+        ],
+        "tiers_h2": "Single service, quoted per vehicle",
+        "tiers_intro": "Treatment starts from $120 per vehicle. Heavy cases (long-term smoke, severe pet) may need a second pass which we'll flag up front.",
+        "tiers": [
+            {
+                "name": "Advanced Odor Elimination",
+                "price": "$120",
+                "primary": True,
+                "features": [
+                    "Source removal - debris, residue, embedded material",
+                    "Hot-water extraction on carpet and upholstery",
+                    "HVAC treatment for vents and evaporator",
+                    "Neutralising treatment, not fragrance masking",
+                    "Single treatment for most cases",
+                    "Heavy cases (smoke, pet) may need second pass",
+                ],
+            },
+        ],
+        "suitable_for_h2": "When odor elimination is the right service",
+        "suitable_for_intro": "Specific patterns where source-removal odor treatment works best.",
+        "suitable_for_cards": [
+            ("Recently bought used cars", "You inherited the previous owner's smoke, pets, or habits. A one-off treatment resets the interior to neutral so you can actually enjoy the car."),
+            ("Smoker's cars going to market", "Buyers walk away from cars that smell like smoke before they even drive them. Treatment is a high-ROI pre-sale step on smoker cars."),
+            ("Pet owner refresh", "Long-term dog or cat transport leaves pet hair deep in carpet pile and pet odor in the upholstery. Treatment resets it."),
+            ("Food spill recovery", "Spilled coffee, milk, takeaway. Spilled-and-set food odors don't air out. They need extraction and treatment."),
+            ("Mould or moisture damage", "Water ingress (leaks, flooding, soaked carpet) leaves a musty smell that doesn't dry out. Treatment after drying clears the residual odor."),
+            ("Hire and fleet cars", "Pre-handover treatment between drivers protects review scores and resale on fleet vehicles."),
+        ],
+        "suburb_cross_links": [],
+        "service_area_chips": [
+            "Cranbourne North", "Cranbourne", "Berwick", "Narre Warren", "Pakenham", "Frankston",
+            "Dandenong", "Hampton Park", "Clyde North", "Hallam", "Endeavour Hills", "Beaconsfield",
+        ],
+        "faq": [
+            ("Does this actually work on heavy smoke?", "Yes, on most cases. Smoke is one of the harder odors to eliminate because it permeates everything including the headlining. We've cleared long-term smoker cars with a single treatment in most cases. We'll tell you up front if your case is borderline."),
+            ("Will my car smell like fragrance afterward?", "No. The goal is neutral, not 'stronger smell on top of the old smell'. The car will smell clean, like a clean car, not like air freshener."),
+            ("How long does the result last?", "Permanently, if the source is gone and not reintroduced. If you continue smoking in the car, the smoke comes back. If you do another long pet road trip without cleaning the carpet, the pet smell returns. The treatment doesn't immunise the car against future odors."),
+            ("Will it work on a flooded car?", "Depends on the severity and how long ago. Flood-damaged cars often have mould growth that needs to be addressed before odor treatment is the right next step. We'll assess and advise on enquiry."),
+            ("Is one treatment enough?", "For most cases, yes. Heavy cases (long-term smokers, severe pet incidents) sometimes need a second pass. We'll quote the most likely scenario and be straight if a second treatment looks needed."),
+            ("Can you treat just the HVAC system?", "Yes, as a standalone. Vent and evaporator treatment is a useful service on cars where the smell is concentrated when the AC turns on."),
+            ("Are you mobile?", "No. Odor elimination is in-studio only. The treatment process needs controlled drying and curing conditions."),
+            ("How much does it cost?", "Starts from $120 per treatment. Final pricing depends on the source, severity, and whether one or two treatments are likely. For heavy cases we'll often quote a price range up front."),
+        ],
+        "schema_offers": [
+            ("Advanced Odor Elimination Treatment", "Source-removal odor treatment with deep extraction, HVAC treatment and neutralising finish. In-studio. Quoted per vehicle."),
+        ],
+        "tier_select_options": [
+            "Odor Elimination - Standard",
+            "Odor Elimination - Heavy (smoke / pet / long-term)",
+            "Not sure - recommend",
+        ],
+        "service_interest": "Advanced Odor Elimination",
+        "form_subject": "New odor elimination enquiry from radiantridesautocare.com.au",
+        "cta_h2": "Ready to remove the smell at source?",
+        "cta_body": "Tell us the source of the odor and how long it's been there. We'll come back within 24 hours with a quote and an honest assessment of whether one treatment will do it.",
+    },
+    {
+        # C8 - Pre-Sale Detail (verified $225 price from packages.html)
+        "slug": "pre-sale-detail",
+        "label": "Pre-Sale Detail",
+        "service_type_schema": "Pre-Sale Car Detail",
+        "title": "Pre-Sale Car Detail Melbourne | From $225 | Radiant Rides AutoCare",
+        "description": "Pre-sale car detail in Melbourne. Photo-ready interior and exterior prep that adds visible value to your listing. From $225 at our Cranbourne North studio.",
+        "og_description": "Photo-ready pre-sale prep for cars going to market. From $225 at our Cranbourne North studio.",
+        "hero_image": "brand_assets/bmw-exterior-03.jpeg",
+        "hero_subhead": "Photo-ready interior and exterior prep that adds visible value to your sale listing. From $225 at our Cranbourne North studio.",
+        "intro_h2": "Detail that pays for itself on resale",
+        "intro_paragraphs": [
+            "Pre-sale detail is built for one specific job: getting a car ready to list. Photos, test drives, walk-throughs. Every surface a buyer's eye lands on is reset to clean. The price you can list at goes up by more than the cost of the detail in almost every case.",
+            "Buyers in Melbourne are sophisticated. They've scrolled through hundreds of listings before they get to yours. The cars that get clicks are the cars whose photos look better than the ones around them. Clean wheels, dressed tyres, polished paint, vacuumed carpet, wiped trim - all of it shows in the photos and all of it raises the perceived value.",
+            "Our Pre-Sale Detail starts from $225 and includes the touch points and visible surfaces that buyers actually look at. For higher-end cars, we'll recommend layering Paint Enhancement on top so the photos pop and the test drive lands. For prestige cars going to market above $50k, full Correction &amp; Coating is a calculation worth running.",
+            "Studio bookings only. Cranbourne North, with most south-east Melbourne suburbs within 20 minutes. Most cars are turned around in a single day.",
+        ],
+        "at_a_glance_label": "Pre-sale detail",
+        "at_a_glance_rows": [
+            ("Studio", "Cranbourne North, VIC"),
+            ("From price", "$225"),
+            ("Turnaround", "Typically single day"),
+            ("Best paired with", "Paint Enhancement (higher-end cars)"),
+            ("Mode", "In-studio only"),
+            ("ROI", "Typically positive - listing price uplift > detail cost"),
+        ],
+        "what_it_does_intro": "Pre-sale prep focuses on what buyers actually see. Four areas that decide whether your listing gets clicked or scrolled past.",
+        "what_it_does_cards": [
+            ("Photo-ready exterior", "Wash, decontamination, wheel and tyre prep, dressed trim. The car photographs sharp from any angle. This is what gets buyers to click your listing."),
+            ("Interior reset", "Vacuum, surface wipe-down, glass clean, plastic dress. The buyer slides into the driver's seat and the first impression is 'this owner cared'."),
+            ("Touch-point detail", "Door handles, steering wheel, gear shift, indicator stalks. The surfaces buyers actually touch on the test drive. Clean here closes the sale."),
+            ("Quick wins on visible wear", "Where it makes sense, we suggest one or two targeted upgrades (headlight restoration, leather conditioning) that lift the perceived value of the car for a fraction of the price uplift they enable."),
+        ],
+        "tiers_h2": "Pre-sale detail from $225",
+        "tiers_intro": "Single offering. Pricing depends on vehicle size and current condition. Available as a standalone or paired with Paint Enhancement / Correction &amp; Coating for higher-end cars.",
+        "tiers": [
+            {
+                "name": "Pre-Sale Detail",
+                "price": "$225",
+                "primary": True,
+                "features": [
+                    "Exterior wash, decontamination, wheel and tyre prep",
+                    "Interior vacuum, surface wipe, glass and plastic dress",
+                    "Touch-point detail on all buyer-contact surfaces",
+                    "Photo-ready finish from any angle",
+                    "Optional add-ons: paint enhancement, leather, headlights",
+                    "Single-day turnaround for most cars",
+                ],
+            },
+        ],
+        "suitable_for_h2": "When pre-sale detail pays for itself",
+        "suitable_for_intro": "ROI patterns where the listing-price uplift comfortably covers the detail cost.",
+        "suitable_for_cards": [
+            ("Used cars $15k+", "The price-uplift mechanic kicks in clearly above $15k. Buyers at this end are doing comparison shopping and respond to presentation."),
+            ("Prestige cars going to market", "European cars, performance cars, or low-km examples. Pre-sale paired with Paint Enhancement or full Correction &amp; Coating compounds the value lift."),
+            ("Trade-in negotiations", "Trade-in valuations are visual. A clean, finished car gets a better offer from the same dealer the same day."),
+            ("Listings stuck on the market", "Relisted cars with thin click rates often have weak photos. A pre-sale detail and fresh photo set is a low-cost re-attempt."),
+            ("Cars with visible neglect", "Tired paint, foggy headlights, scuffed trim. Pre-sale resets all of this so the photos don't telegraph 'haven't kept up with it'."),
+            ("Pre-handover for sold cars", "Some sellers add pre-sale prep as a closing courtesy. Costs little, leaves a great impression, and supports word-of-mouth."),
+        ],
+        "suburb_cross_links": [],
+        "service_area_chips": [
+            "Cranbourne North", "Cranbourne", "Berwick", "Narre Warren", "Pakenham", "Frankston",
+            "Dandenong", "Hampton Park", "Clyde North", "Hallam", "Endeavour Hills", "Beaconsfield",
+        ],
+        "faq": [
+            ("How is pre-sale different from a regular detail?", "Pre-sale prioritises the visible surfaces buyers see in photos and on a test drive. A regular detail might go deeper into areas that don't affect the listing. Pre-sale is built around the listing photos and the buyer's eye path."),
+            ("Should I pair pre-sale with paint enhancement?", "For higher-end cars (around $25k+), yes. The paint upgrade shows in photos and on the test drive, and the uplift typically outpaces the cost. We talk it through on enquiry."),
+            ("How long does it take?", "Most cars are a single day. Cars with Paint Enhancement added are still typically same-day or next-morning pickup."),
+            ("Will this help me sell faster?", "In our experience, yes - and at a slightly higher price. A clean, finished car gets more clicks, more inspections, and a stronger negotiating position. The combined effect typically pays back several times the cost."),
+            ("Can I book this same day if my listing goes up tomorrow?", "Often yes, depending on the schedule. Call us on 0449 801 505 and we'll tell you straight whether we can fit it in."),
+            ("What about photos - do you do those?", "We don't shoot the listing photos but we hand the car back ready to be photographed. Most owners shoot the same day with their phone, ideally in even outdoor light."),
+            ("Are you mobile?", "No. Pre-sale detail is in-studio only. The controlled environment is what makes the difference between a wash and a finished car."),
+            ("Is the $225 price the final cost?", "$225 is the starting price for most cars. Larger vehicles, dirtier vehicles, or add-on services (paint enhancement, leather, headlights) move the final number. We quote on enquiry."),
+        ],
+        "schema_offers": [
+            ("Pre-Sale Car Detail", "Photo-ready exterior and interior prep for cars going to market. From $225 at Cranbourne North studio."),
+        ],
+        "tier_select_options": [
+            "Pre-Sale Detail - Standard (From $225)",
+            "Pre-Sale Detail + Paint Enhancement",
+            "Pre-Sale Detail + Correction & Coating",
+            "Not sure - recommend",
+        ],
+        "service_interest": "Pre-Sale Detail",
+        "form_subject": "New pre-sale detail enquiry from radiantridesautocare.com.au",
+        "cta_h2": "Listing soon? Let's get it photo-ready.",
+        "cta_body": "Tell us about the car and the timeline. We'll come back within 24 hours with a quote and an honest call on whether to add Paint Enhancement.",
+    },
+]
+
+
+def build_at_a_glance_rows(rows):
+    out = []
+    for i, (label, value) in enumerate(rows):
+        cls = "flex justify-between" + ("" if i == len(rows) - 1 else " border-b border-white/10 pb-3")
+        out.append(f'          <li class="{cls}"><span class="text-neutral-400">{label}</span><span class="font-semibold">{value}</span></li>')
+    return "\n".join(out)
+
+
+def build_suitable_for_cards(cards):
+    out = []
+    for title, body in cards:
+        out.append(f"""      <div class="service-card">
+        <h3 class="text-xl mb-2">{title}</h3>
+        <p class="text-neutral-400 text-sm leading-relaxed">{body}</p>
+      </div>""")
+    return "\n".join(out)
+
+
+def build_maintenance_block(block):
+    tick = '<svg class="feature-tick mt-1 flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>'
+    items_html = "\n          ".join(
+        f'<li class="flex gap-3 items-start">{tick}{item}</li>' for item in block["items"]
+    )
+    return f"""      <div>
+        <h3 class="text-2xl mb-4 uppercase">{block['h3']}</h3>
+        <ul class="space-y-3 text-neutral-300 text-base leading-relaxed">
+          {items_html}
+        </ul>
+      </div>"""
+
+
+def build_suburb_cross_link_cards(links):
+    """Phase C cross-link cards (3-col grid). Each link is (title, body, href)."""
+    if not links:
+        return ""
+    cards = []
+    for title, body, href in links:
+        cards.append(f"""      <a href="{href}" class="service-card flex items-start gap-4">
+        <div class="service-icon flex-shrink-0"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 2.5l8 3v6c0 5-3.5 8.7-8 10-4.5-1.3-8-5-8-10v-6l8-3z"/></svg></div>
+        <div><h3 class="text-lg mb-1">{title}</h3><p class="text-neutral-400 text-sm">{body}</p></div>
+      </a>""")
+    cards.append("""      <a href="/contact" class="service-card flex items-start gap-4 border-dashed">
+        <div class="service-icon flex-shrink-0"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+        <div><h3 class="text-lg mb-1">Different suburb?</h3><p class="text-neutral-400 text-sm">We service all of south-east Melbourne. Drop us a note for a quote from your area.</p></div>
+      </a>""")
+    return "\n".join(cards)
+
+
+def build_service_hub_page(s):
+    canonical = f"{SITE}/{s['slug']}"
+    intro_paras_html = "\n        ".join(f"<p>{p}</p>" for p in s["intro_paragraphs"])
+    at_a_glance = build_at_a_glance_rows(s["at_a_glance_rows"])
+    what_cards = build_what_it_does_cards(s["what_it_does_cards"])
+    tier_cards = build_tier_cards(s["tiers"])
+    suitable_cards = build_suitable_for_cards(s["suitable_for_cards"])
+
+    # Tier grid layout: 1 tier centered, 2-3 tiers full grid
+    if len(s["tiers"]) == 1:
+        tier_grid_class = "grid md:grid-cols-1 max-w-2xl mx-auto gap-5"
+    elif len(s["tiers"]) == 2:
+        tier_grid_class = "grid md:grid-cols-2 gap-5"
+    else:
+        tier_grid_class = "grid md:grid-cols-3 gap-5"
+
+    # Maintenance section is optional (some services don't have post-service maintenance)
+    if s.get("maintenance_blocks"):
+        maintenance_html = "\n".join(build_maintenance_block(b) for b in s["maintenance_blocks"])
+        maintenance_section = f"""
+
+<!-- Maintenance -->
+<section class="py-20 md:py-28 bg-[#0a0a0a]">
+  <div class="container-x">
+    <div class="max-w-3xl mb-14">
+      <div class="tagline mb-4">After the service</div>
+      <h2 class="text-3xl md:text-5xl mb-5 uppercase leading-tight">{s['maintenance_h2']}</h2>
+      <p class="text-neutral-400 text-lg leading-relaxed">{s['maintenance_subhead']}</p>
+    </div>
+    <div class="grid md:grid-cols-2 gap-12 lg:gap-16">
+{maintenance_html}
+    </div>
+  </div>
+</section>"""
+    else:
+        maintenance_section = ""
+
+    # Suburb cross-links (only services with sibling suburb LPs)
+    suburb_cards = build_suburb_cross_link_cards(s.get("suburb_cross_links", []))
+    if suburb_cards:
+        suburb_section = f"""
+
+<!-- Suburb cross-links -->
+<section class="py-20 md:py-24">
+  <div class="container-x">
+    <div class="max-w-2xl mb-10">
+      <div class="tagline mb-4">Suburb pages</div>
+      <h2 class="text-3xl md:text-5xl mb-4 uppercase leading-tight">{s['label']} in your suburb</h2>
+      <p class="text-neutral-400 text-lg leading-relaxed">Suburb-specific pages with drive times, surrounding areas, and FAQ tailored to your local catchment.</p>
+    </div>
+    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+{suburb_cards}
+    </div>
+  </div>
+</section>"""
+    elif s.get("service_area_chips"):
+        # Fallback: show service-area chips for services without suburb LPs
+        chips_html = "\n".join(
+            f'      <div class="border border-white/10 px-4 py-3 text-center"><p class="text-neutral-300 text-sm font-semibold">{c}</p></div>'
+            for c in s["service_area_chips"]
+        )
+        suburb_section = f"""
+
+<!-- Service area -->
+<section class="py-20 md:py-24">
+  <div class="container-x">
+    <div class="max-w-2xl mb-10">
+      <div class="tagline mb-4">Service area</div>
+      <h2 class="text-3xl md:text-5xl mb-4 uppercase leading-tight">Where we service</h2>
+      <p class="text-neutral-400 text-lg leading-relaxed">{s['label']} for drivers across south-east Melbourne, booked at our Cranbourne North studio.</p>
+    </div>
+    <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-3">
+{chips_html}
+    </div>
+  </div>
+</section>"""
+    else:
+        suburb_section = ""
+
+    # FAQ + schema
+    faq_html = build_faq_html(s["faq"])
+    faq_schema = build_faq_schema(s["faq"])
+    schema_offers = build_schema_offers(s["schema_offers"])
+    select_options = build_select_options(s["tier_select_options"])
+
+    return f"""<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>{s['title']}</title>
+<meta name="description" content="{s['description']}" />
+<meta name="google-site-verification" content="GEjj3uAIpsoPo9sPHQSo7hQLPrSucyHd-c6V0Ak8Ufg" />
+
+<meta property="og:title" content="{s['title']}" />
+<meta property="og:description" content="{s['og_description']}" />
+<meta property="og:image" content="{SITE}/{s['hero_image']}" />
+<meta property="og:url" content="{canonical}" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary_large_image" />
+
+<link rel="icon" type="image/png" sizes="32x32" href="brand_assets/699659fa91a4b7a50b6a86e0_favicon-32x32.png" />
+<link rel="apple-touch-icon" href="brand_assets/699aee6a8a929099d7bd579d_RRAC_WEBCLIP.png" />
+
+<link rel="canonical" href="{canonical}" />
+
+{HEAD_COMMON}
+
+<script type="application/ld+json">
+{{
+  "@context": "https://schema.org",
+  "@graph": [
+    {{
+      "@type": "AutoBodyShop",
+      "@id": "{SITE}/#business",
+      "name": "Radiant Rides AutoCare",
+      "image": "{SITE}/brand_assets/6993c810021c99eafe30839f_Radiant_Rides_logo_art.png",
+      "url": "{SITE}/",
+      "telephone": "+61449801505",
+      "email": "hello@radiantridesautocare.com.au",
+      "address": {{
+        "@type": "PostalAddress",
+        "streetAddress": "Crestway Dr",
+        "addressLocality": "Cranbourne North",
+        "addressRegion": "VIC",
+        "addressCountry": "AU"
+      }},
+      "areaServed": "Melbourne, Victoria",
+      "priceRange": "$$"
+    }},
+    {{
+      "@type": "Service",
+      "serviceType": "{s['service_type_schema']}",
+      "name": "{s['label']} Melbourne",
+      "description": "{s['og_description']}",
+      "provider": {{ "@id": "{SITE}/#business" }},
+      "areaServed": {{ "@type": "City", "name": "Melbourne" }},
+      "hasOfferCatalog": {{
+        "@type": "OfferCatalog",
+        "name": "{s['label']} options",
+        "itemListElement": [
+{schema_offers}
+        ]
+      }}
+    }},
+    {{
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {{ "@type": "ListItem", "position": 1, "name": "Home", "item": "{SITE}/" }},
+        {{ "@type": "ListItem", "position": 2, "name": "Packages", "item": "{SITE}/packages" }},
+        {{ "@type": "ListItem", "position": 3, "name": "{s['label']}", "item": "{canonical}" }}
+      ]
+    }},
+    {{
+      "@type": "FAQPage",
+      "mainEntity": [
+{faq_schema}
+      ]
+    }}
+  ]
+}}
+</script>
+
+<link rel="stylesheet" href="assets/site.css" />
+</head>
+
+<body>
+
+{HEADER}
+
+<nav aria-label="Breadcrumb" class="border-b border-white/10 bg-black">
+  <div class="container-x py-3">
+    <ol class="flex items-center gap-2 text-xs text-neutral-400">
+      <li><a href="/" class="hover:text-white">Home</a></li>
+      <li aria-hidden="true" class="text-neutral-600">/</li>
+      <li><a href="/packages" class="hover:text-white">Packages</a></li>
+      <li aria-hidden="true" class="text-neutral-600">/</li>
+      <li class="text-white" aria-current="page">{s['label']}</li>
+    </ol>
+  </div>
+</nav>
+
+<!-- Hero -->
+<section class="relative hero-bg overflow-hidden">
+  <img src="{s['hero_image']}" alt="" class="absolute inset-0 w-full h-full object-cover" />
+  <div class="relative z-10 container-x py-20 md:py-28">
+    <div class="max-w-3xl">
+      <div class="tagline mb-5">Melbourne {s['label'].lower()}</div>
+      <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl leading-[1.05] mb-6">
+        {s['label']}<br class="hidden sm:block" />
+        <span>in Melbourne</span>
+      </h1>
+      <p class="text-lg md:text-xl text-neutral-300 max-w-2xl mb-9 leading-relaxed">
+        {s['hero_subhead']}
+      </p>
+      <div class="flex flex-wrap gap-3">
+        <a href="#enquire" class="btn btn-primary">Get a quote</a>
+        <a href="tel:0449801505" class="btn btn-secondary">Call 0449 801 505</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Intro -->
+<section class="py-20 md:py-28">
+  <div class="container-x grid lg:grid-cols-5 gap-12 lg:gap-16">
+    <div class="lg:col-span-3">
+      <div class="tagline mb-4">What it is</div>
+      <h2 class="text-3xl md:text-5xl mb-7 uppercase leading-tight">{s['intro_h2']}</h2>
+      <div class="space-y-5 text-neutral-300 text-lg leading-relaxed">
+        {intro_paras_html}
+      </div>
+    </div>
+    <aside class="lg:col-span-2">
+      <div class="sub-card p-7 md:p-9">
+        <div class="tagline mb-4">At a glance</div>
+        <h3 class="text-2xl mb-5">{s['at_a_glance_label']}</h3>
+        <ul class="space-y-3 text-neutral-200 text-base">
+{at_a_glance}
+        </ul>
+        <a href="#enquire" class="btn btn-primary w-full mt-6">Enquire now</a>
+      </div>
+    </aside>
+  </div>
+</section>
+
+<div class="section-divider"></div>
+
+<!-- What it does -->
+<section class="py-20 md:py-28">
+  <div class="container-x">
+    <div class="max-w-2xl mb-14">
+      <div class="tagline mb-4">The detail</div>
+      <h2 class="text-3xl md:text-5xl mb-5 uppercase leading-tight">What {s['label'].lower()} actually does</h2>
+      <p class="text-neutral-400 text-lg leading-relaxed">{s['what_it_does_intro']}</p>
+    </div>
+    <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+{what_cards}
+    </div>
+  </div>
+</section>
+
+<!-- Tiers -->
+<section class="py-20 md:py-28 bg-[#0a0a0a]">
+  <div class="container-x">
+    <div class="max-w-2xl mx-auto text-center mb-14">
+      <div class="tagline mb-4">{s['label']} options</div>
+      <h2 class="text-3xl md:text-5xl mb-5 uppercase">{s['tiers_h2']}</h2>
+      <p class="text-neutral-400 text-lg">{s['tiers_intro']}</p>
+    </div>
+    <div class="{tier_grid_class}">
+{tier_cards}
+    </div>
+    <p class="text-center text-neutral-500 text-sm mt-8">Final pricing depends on vehicle size and current condition. We quote every job after seeing the car.</p>
+  </div>
+</section>
+
+<!-- Suitable for -->
+<section class="py-20 md:py-28">
+  <div class="container-x">
+    <div class="max-w-2xl mb-14">
+      <div class="tagline mb-4">Who it suits</div>
+      <h2 class="text-3xl md:text-5xl mb-5 uppercase leading-tight">{s['suitable_for_h2']}</h2>
+      <p class="text-neutral-400 text-lg leading-relaxed">{s['suitable_for_intro']}</p>
+    </div>
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+{suitable_cards}
+    </div>
+  </div>
+</section>{maintenance_section}{suburb_section}
+
+<!-- FAQ -->
+<section class="py-20 md:py-28 bg-[#0a0a0a]">
+  <div class="container-x max-w-3xl">
+    <div class="text-center mb-14">
+      <div class="tagline mb-4">FAQs</div>
+      <h2 class="text-3xl md:text-5xl">{s['label']} - FAQs</h2>
+    </div>
+    <div class="faq">
+{faq_html}
+    </div>
+  </div>
+</section>
+
+<!-- CTA banner -->
+<section class="cta-banner py-16 md:py-24 px-6 md:px-10 text-center">
+  <div class="max-w-4xl mx-auto">
+    <h2 class="text-3xl md:text-5xl text-white mb-4">{s['cta_h2']}</h2>
+    <p class="text-white/90 max-w-2xl mx-auto text-lg mb-7">{s['cta_body']}</p>
+    <div class="flex flex-wrap gap-3 justify-center">
+      <a href="#enquire" class="btn btn-dark">Get a quote</a>
+      <a href="tel:0449801505" class="btn btn-secondary">Call 0449 801 505</a>
+    </div>
+  </div>
+</section>
+
+<!-- Contact form -->
+<section id="enquire" class="py-20 md:py-28 bg-white text-neutral-900">
+  <div class="container-x grid lg:grid-cols-5 gap-10 lg:gap-14 items-start">
+    <div class="lg:col-span-2">
+      <div class="inline-block px-3 py-1 border border-neutral-300 text-xs uppercase tracking-[0.18em] text-neutral-600 mb-5">{s['label']} enquiries</div>
+      <h2 class="text-3xl md:text-5xl text-neutral-950 mb-4 leading-tight">Quote my {s['label'].lower()}</h2>
+      <p class="text-neutral-700 text-lg mb-8">Drop your car details. We'll get back to you within 24 hours with a fixed quote.</p>
+      <div class="space-y-3">
+        <a href="tel:0449801505" class="group flex items-center gap-4 bg-neutral-100 hover:bg-neutral-200 transition p-5">
+          <div class="w-10 h-10 bg-neutral-900 text-white flex items-center justify-center flex-shrink-0">
+            <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.79 19.79 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          </div>
+          <div>
+            <div class="text-xs uppercase tracking-[0.18em] text-neutral-500 mb-0.5">Phone</div>
+            <div class="text-base font-semibold text-neutral-950">0449 801 505</div>
+          </div>
+        </a>
+        <a href="mailto:hello@radiantridesautocare.com.au" class="group flex items-center gap-4 bg-neutral-100 hover:bg-neutral-200 transition p-5">
+          <div class="w-10 h-10 bg-neutral-900 text-white flex items-center justify-center flex-shrink-0">
+            <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg>
+          </div>
+          <div>
+            <div class="text-xs uppercase tracking-[0.18em] text-neutral-500 mb-0.5">Email</div>
+            <div class="text-base font-semibold text-neutral-950 break-all">hello@radiantridesautocare.com.au</div>
+          </div>
+        </a>
+        <a href="https://maps.app.goo.gl/zjQsW3KK7zboiCJX7" target="_blank" rel="noopener" class="group flex items-center gap-4 bg-neutral-100 hover:bg-neutral-200 transition p-5">
+          <div class="w-10 h-10 bg-neutral-900 text-white flex items-center justify-center flex-shrink-0">
+            <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          </div>
+          <div>
+            <div class="text-xs uppercase tracking-[0.18em] text-neutral-500 mb-0.5">Studio</div>
+            <div class="text-base font-semibold text-neutral-950">Cranbourne North, VIC</div>
+          </div>
+        </a>
+      </div>
+    </div>
+
+    <div class="lg:col-span-3 bg-neutral-50 border border-neutral-200 p-6 md:p-10">
+      <h3 class="text-xl md:text-2xl text-neutral-950 font-bold mb-2">Send us a message</h3>
+      <p class="text-neutral-600 mb-6">Tell us about your car and what you're after. We'll come back with a quote.</p>
+      <form action="https://formspree.io/f/mojrwrgw" method="POST" class="space-y-4">
+        <input type="hidden" name="_subject" value="{s['form_subject']}" />
+        <input type="hidden" name="_next" value="https://www.radiantridesautocare.com.au/thank-you" />
+        <input type="hidden" name="_source_page" value="{s['slug']}" />
+        <input type="hidden" name="service_interest" value="{s['service_interest']}" />
+
+        <div class="grid sm:grid-cols-2 gap-4">
+          <label class="block">
+            <span class="block text-xs uppercase tracking-[0.16em] text-neutral-600 mb-1.5 font-semibold">Name</span>
+            <input type="text" name="name" required class="form-input" placeholder="Your name" />
+          </label>
+          <label class="block">
+            <span class="block text-xs uppercase tracking-[0.16em] text-neutral-600 mb-1.5 font-semibold">Phone</span>
+            <input type="tel" name="phone" class="form-input" placeholder="0400 000 000" />
+          </label>
+        </div>
+        <label class="block">
+          <span class="block text-xs uppercase tracking-[0.16em] text-neutral-600 mb-1.5 font-semibold">Email</span>
+          <input type="email" name="email" required class="form-input" placeholder="you@example.com" />
+        </label>
+        <div class="grid sm:grid-cols-2 gap-4">
+          <label class="block">
+            <span class="block text-xs uppercase tracking-[0.16em] text-neutral-600 mb-1.5 font-semibold">Vehicle</span>
+            <input type="text" name="vehicle" class="form-input" placeholder="e.g. 2018 Mazda CX-5" />
+          </label>
+          <label class="block">
+            <span class="block text-xs uppercase tracking-[0.16em] text-neutral-600 mb-1.5 font-semibold">Suburb</span>
+            <input type="text" name="suburb" class="form-input" placeholder="e.g. Berwick" />
+          </label>
+        </div>
+        <label class="block">
+          <span class="block text-xs uppercase tracking-[0.16em] text-neutral-600 mb-1.5 font-semibold">Option</span>
+          <select name="package" class="form-input">
+            <option value="">Select an option</option>
+{select_options}
+          </select>
+        </label>
+        <label class="block">
+          <span class="block text-xs uppercase tracking-[0.16em] text-neutral-600 mb-1.5 font-semibold">Message</span>
+          <textarea name="message" rows="5" class="form-input" placeholder="Tell us about your car and what you're after."></textarea>
+        </label>
+        <div class="pt-2">
+          <button type="submit" class="btn btn-primary w-full sm:w-auto">Send enquiry</button>
+          <p class="text-xs text-neutral-500 mt-3">We respond within 24 hours.</p>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>
+
+{FOOTER}
+
+</body>
+</html>
+"""
+
+
 def main():
     for page in PAGES:
         out_path = ROOT / f"{page['slug']}.html"
@@ -1104,6 +2155,12 @@ def main():
         out_path.write_text(html, encoding="utf-8")
         line_count = html.count("\n") + 1
         print(f"Wrote {page['slug']}.html  ({line_count} lines, {len(html)} chars)")
+    for s in SERVICE_HUBS:
+        out_path = ROOT / f"{s['slug']}.html"
+        html = build_service_hub_page(s)
+        out_path.write_text(html, encoding="utf-8")
+        line_count = html.count("\n") + 1
+        print(f"Wrote {s['slug']}.html  ({line_count} lines, {len(html)} chars)")
 
 
 if __name__ == "__main__":
