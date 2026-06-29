@@ -9,7 +9,7 @@
 **Owner:** Dylan Tanner (Head Detailer) - stays anonymous on site (no name/title)
 **Phone:** 0449 801 505
 **Email:** hello@radiantridesautocare.com.au
-**ABN:** 74 177 391 469
+**ABN:** 98 500 156 705
 **Location:** Crestway Dr, Cranbourne North, VIC
 **Live URL:** www.radiantridesautocare.com.au
 **Domain registrar:** Registry Australia (Dylan owns domain)
@@ -83,9 +83,11 @@ Scraped HTML reference: `C:/Users/james/AppData/Local/Temp/radiant_rides_scrape/
 - Compare reference vs build, fix diffs, re-screenshot. At least 2 rounds per page.
 
 ## Output Defaults
-- Single HTML file per page, all styles inline, unless told otherwise.
-- Tailwind via CDN: `<script src="https://cdn.tailwindcss.com"></script>`
-- Google Fonts: Sora (700) for headings, Inter (400, 500) for body. Match Webflow's stack.
+- Single HTML file per page, component styles inline in a `<style>` block, unless told otherwise.
+- **Tailwind: precompiled static CSS, NOT the CDN.** Link `<link rel="stylesheet" href="assets/tailwind.css" />` (loaded before `assets/site.css` so site.css wins the cascade). The `cdn.tailwindcss.com` Play CDN was removed 2026-06-18 (render-blocking 124KB JS, the dominant perf issue). After adding/changing utility classes, rebuild with the standalone CLI (no Node needed):
+  `/tmp/tailwindcss -c /tmp/rrac-tw.config.js -i /tmp/rrac-tw-input.css -o assets/tailwind.css --minify`
+  (config `content` = `*.html`, safelist `hidden`/`open`/`active`/`menu-active`/`has-value`; input = the three `@tailwind` directives). Download the CLI from `github.com/tailwindlabs/tailwindcss/releases` (`tailwindcss-macos-arm64`, match v3.4.17). Verify class coverage before deploy.
+- Google Fonts: Sora (700) for headings, Inter (400, 500) for body. Loaded off the critical path via `rel="preload" as="style"` + `onload` swap with a `<noscript>` fallback (not a plain render-blocking stylesheet).
 - Mobile-first responsive.
 
 ## Brand Palette (from Webflow CSS)
