@@ -34,6 +34,7 @@ Cranbourne North + Melbourne (mobile-capable for headlight restoration; in-shop 
 ### Tracking (preserve verbatim on every page)
 - GA4: `G-C62DXBY0EC`
 - Google Site Verification: `GEjj3uAIpsoPo9sPHQSo7hQLPrSucyHd-c6V0Ak8Ufg`
+- Meta Pixel: `987419320779913` (installed 2026-08-24 for Dylan's Meta ads). Base code sits in `<head>` directly after the GA4 block on all 25 pages, marked `/* SUTERA_META_PIXEL */`. The `Lead` event fires on `thank-you.html` only, marked `/* SUTERA_META_LEAD */` - the Formspree `_next` field redirects there on success, so it counts accepted submissions rather than submit attempts. Re-run or repair with `python3 .build/meta_pixel_patch.py` (idempotent).
 - No Google Ads conversion pixel currently (Dylan declined Ads on 2026-03-11; revisit if pricing reaches $800+)
 
 ### Third-party widgets in use on Webflow (decide per-page whether to keep)
