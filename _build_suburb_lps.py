@@ -12,6 +12,7 @@ Usage:
     python3 _build_suburb_lps.py
 """
 
+import sys
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent
@@ -33,7 +34,25 @@ HEAD_COMMON = """<script async src="https://www.googletagmanager.com/gtag/js?id=
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Sora:wght@600;700;800&display=swap" onload="this.onload=null;this.rel='stylesheet'" />
-<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Sora:wght@600;700;800&display=swap" /></noscript>"""
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Sora:wght@600;700;800&display=swap" /></noscript>
+
+<!-- Sutera lead events (GA4) -->
+<script>/* SUTERA_LEAD_EVENTS */
+(function(){
+  function ev(n, p){ if (typeof window.gtag === 'function') { window.gtag('event', n, Object.assign({transport_type:'beacon'}, p||{})); } }
+  document.addEventListener('click', function(e){
+    var a = e.target.closest ? e.target.closest('a[href^="tel:"]') : null;
+    if (a) ev('click_to_call', { link_url: a.getAttribute('href') });
+  }, true);
+  document.addEventListener('submit', function(e){
+    var f = e.target;
+    if (!f || f.tagName !== 'FORM' || f.hasAttribute('data-no-lead')) return;
+    var action = f.getAttribute('action') || '';
+    var isLead = /formspree/i.test(action) || f.querySelector('input[type="email"], input[type="tel"], textarea');
+    if (isLead) ev('generate_lead', { form_id: f.id || f.getAttribute('name') || 'contact' });
+  }, true);
+})();
+</script>"""
 
 # ============================================================
 # SHARED HEADER (identical across all pages on the site)
@@ -471,6 +490,62 @@ SERVICES = {
         "hero_image": "brand_assets/mercedes-interior-front.jpeg",
         "from_price_label": "$110 (basic) / $300 (paint enhancement)",
     },
+    "leather-reconditioning": {
+        "label": "Leather Reconditioning",
+        "service_type_schema": "Leather Reconditioning",
+        "tagline_short": "leather brought back to supple, sealed and even",
+        "what_it_does_intro": "Seats are the one surface you touch on every single drive, and leather shows that contact sooner than anything else in the cabin. A surface wipe can't reach wear that has settled into the pores. Reconditioning can, through four stages where the order matters as much as the work.",
+        "what_it_does_cards": [
+            ("Deep pore clean", "Leather-safe cleaners and careful agitation draw years of grime, body oils and dye transfer up out of the pores. Nothing else in the process works until this step is done properly."),
+            ("Finish treatment", "Scuffed and faded areas of the dyed surface get evened up, so the seat reads as one consistent colour again instead of advertising its wear points."),
+            ("Conditioning", "Hide that has dried out goes brittle and cracks. Working conditioner back into it restores the flex and the soft sheen the interior had when it was new."),
+            ("UV protectant", "The final seal buys the leather time against the sun, slowing the drying and fading cycle so the result holds for years rather than months."),
+        ],
+        "tiers_h2": "How leather reconditioning is booked",
+        "tiers_intro": "One service, priced per car. The quote moves with how many seats you're doing and the state they're in when we see them.",
+        "tiers": [
+            {
+                "name": "Leather Reconditioning",
+                "price": "$75",
+                "primary": True,
+                "features": [
+                    "Pore-deep clean of every treated seat",
+                    "Dye touch-up where the finish has scuffed",
+                    "Conditioner worked in to restore flex",
+                    "UV seal to slow future sun damage",
+                    "Scope from one seat to the full interior",
+                ],
+            },
+            {
+                "name": "Interior Reset &amp; Protection<br/>with Leather Add-On",
+                "price": "$150",
+                "primary": False,
+                "features": [
+                    "Full interior deep clean and reset",
+                    "Vents, carpet, upholstery and trim",
+                    "Leather reconditioning booked as the add-on",
+                    "One drop-off covers the whole interior",
+                ],
+            },
+        ],
+        "schema_offers": [
+            ("Leather Reconditioning", "Four-stage in-studio process: pore-deep clean, dye touch-up, conditioning and UV seal, scoped from one seat to a full interior."),
+            ("Interior Reset & Protection with Leather Add-On", "Complete interior reset with the leather process booked alongside it."),
+        ],
+        "tier_select_options": [
+            "Leather Reconditioning - From $75",
+            "Interior Reset & Protection with Leather Add-On - From $150",
+            "Not sure - recommend",
+        ],
+        "faq_default": [
+            ("How long does leather reconditioning take?", "Anywhere from a morning to a full working day. One seat or the front pair sits at the short end; a complete interior carrying years of accumulated wear sits at the long end. You get a firm time frame with the quote."),
+            ("Is it worth doing on an older daily driver?", "Older daily drivers are where the results are most dramatic. The driver's bolster and the centre cushion always go first, and treating the whole seat early stops the gap from widening. Pale interiors in cream, tan or beige benefit most because they show every mark."),
+            ("Can you fix denim dye transfer on light leather?", "Yes, and it's one of the most frequent jobs we see on pale interiors. The deep clean draws the blue out of the pores and the finish stage levels any staining the dye has left behind."),
+            ("Do I book it standalone or with a detail?", "Whichever suits. It works as its own booking from $75, or paired with an Interior Reset &amp; Protection so the entire cabin is done in one visit. Flag it in the enquiry and the quote covers both together."),
+        ],
+        "hero_image": "brand_assets/bmw-m-interior-front.jpeg",
+        "from_price_label": "$75",
+    },
 }
 
 # ============================================================
@@ -623,6 +698,99 @@ PAGES = [
             ("Is it worth the drive from Pakenham?", "Most of our Pakenham regulars combine the drop-off with another errand in the Cranbourne or Berwick direction. A proper detail holds for weeks, not days, so the trip earns its keep on the back of a single booking."),
         ],
     },
+    {
+        "service": "ceramic-coating",
+        "suburb": "Cranbourne",
+        "slug": "ceramic-coating-cranbourne",
+        "copy_overrides": {
+            "tiers_intro": "Options run from an entry-level sealant up to a full multi-year ceramic. Being five minutes down the road, most Cranbourne owners just call in and settle the tier in person once we have both had a proper look at the paint under the lights.",
+        },
+        "drive_min": 5,
+        "drive_route": "local",
+        "geo_lat": "-38.1099",
+        "geo_lon": "145.2829",
+        "intro_paragraphs": [
+            "Cranbourne is our home patch. The studio is a few minutes up the road in Cranbourne North, so if you've been weighing up ceramic coating and putting it off because every coater seemed to be on the other side of Melbourne, you're already closer than you think.",
+            "Think of a ceramic coating as a glass-hard shell cured into the factory clear coat rather than sitting on top of it, which is why it survives years of washing where a wax gives up in weeks. Road film rinses away instead of baking on, drying the car after a wash takes minutes, and the finish keeps its depth instead of slowly going flat under the summer sun. On a daily driver doing the South Gippsland Highway crawl, that's the difference between paint that ages and paint that doesn't.",
+            "Every coating we do is laid down at the Cranbourne North studio, because applying ceramic properly demands clean air, a stable temperature and lighting that exposes every defect before the coating locks it in. From central Cranbourne the drive is about five minutes. A Paint Enhancement finished with sealant usually goes home the same afternoon; the full correct-and-coat job stays with us for a day or two.",
+        ],
+        "surrounding": [
+            "Cranbourne East", "Cranbourne West", "Cranbourne North", "Cranbourne South", "Clyde North",
+            "Clyde", "Lynbrook", "Lyndhurst", "Hampton Park", "Botanic Ridge",
+            "Junction Village", "Skye",
+        ],
+        "cross_links": [
+            ("Paint correction Cranbourne", "/paint-correction-cranbourne"),
+            ("Leather reconditioning Cranbourne", "/leather-reconditioning-cranbourne"),
+            ("Car detailing Cranbourne", "/car-detailing-cranbourne"),
+            ("All packages", "/packages"),
+        ],
+        "faq_extra": [
+            ("Are you mobile? Can you come to me in Cranbourne?", "No, coating is strictly an in-studio job for us. The bonding stage is unforgiving: airborne dust, humidity swings or bad light all end up sealed under the coating, so ceramic only ever gets applied at Cranbourne North, around five minutes from the middle of Cranbourne. If it's the headlights you're after, that restoration service does travel as a <strong>mobile add-on</strong>."),
+            ("How much is ceramic coating in Cranbourne?", "The entry point is $300, which buys the Paint Enhancement package finished with a ceramic sealant. The full multi-year system, correction first and coating over the top, begins at $1,000. Where your car lands inside those ranges comes down to its size, how the paint presents and which tier suits your ownership plans, so we confirm the number once we've seen it."),
+        ],
+    },
+    {
+        "service": "paint-correction",
+        "suburb": "Cranbourne",
+        "slug": "paint-correction-cranbourne",
+        "copy_overrides": {
+            "what_it_does_intro": "Correction is machine polishing worked in stages, each pass cutting finer than the one before, until the swirls, holograms and light scratching sitting in the clear coat are removed rather than filled in. It is also the groundwork for any protection worth paying for, because a coating laid over uncorrected paint simply seals the defects under glass.",
+        },
+        "drive_min": 5,
+        "drive_route": "local",
+        "geo_lat": "-38.1099",
+        "geo_lon": "145.2829",
+        "intro_paragraphs": [
+            "Swirl marks don't care where you live, but if you're in Cranbourne the fix is closer than most people realise. Our studio is a few minutes up the road in Cranbourne North, and machine correction is the part of the trade we're fussiest about.",
+            "Correction means machining away a whisker of damaged clear coat until what's left is flat and optically clean. Fine scratches scatter light, which is what makes a dark car look grey and a metallic look flat; once they're levelled, the colour reads deep again and the flake fires in the sun. It's slow, measured work with a machine, pads and compounds, not a glaze that hides the damage until the next wash.",
+            "Being local makes the logistics painless. The car comes to the studio in the morning and most enhancement-level bookings are finished by the afternoon; cars that need the genuine two-stage treatment stay a little longer, driven by how the paint presents once we get it under the lights.",
+        ],
+        "surrounding": [
+            "Cranbourne East", "Cranbourne West", "Cranbourne North", "Cranbourne South", "Clyde North",
+            "Clyde", "Lynbrook", "Lyndhurst", "Hampton Park", "Botanic Ridge",
+            "Junction Village", "Skye",
+        ],
+        "cross_links": [
+            ("Ceramic coating Cranbourne", "/ceramic-coating-cranbourne"),
+            ("Leather reconditioning Cranbourne", "/leather-reconditioning-cranbourne"),
+            ("Paint correction Clyde North", "/paint-correction-clyde-north"),
+            ("All packages", "/packages"),
+        ],
+        "faq_extra": [
+            ("Are you mobile? Can you come to me in Cranbourne?", "All correction happens at the Cranbourne North studio rather than in driveways. Reading defects honestly takes controlled lighting and chasing them out takes a stable environment, so mobile isn't something we offer for this work. From anywhere central in Cranbourne you're roughly five minutes from the door."),
+            ("How much is paint correction in Cranbourne?", "A single-stage Paint Enhancement opens at $300, a genuine full correction at $400, and pairing correction with a multi-year ceramic starts from $1,000. The honest answer on any specific car needs eyes on the paint first, so treat those as starting points and we'll firm up the number at drop-off."),
+        ],
+    },
+    {
+        "service": "leather-reconditioning",
+        "suburb": "Cranbourne",
+        "slug": "leather-reconditioning-cranbourne",
+        "drive_min": 5,
+        "drive_route": "local",
+        "geo_lat": "-38.1099",
+        "geo_lon": "145.2829",
+        "intro_paragraphs": [
+            "Leather interiors around Cranbourne cop the full daily-driver load: school runs, work gear, sunscreen in summer, and the slow drying that Melbourne sun does to every seat it touches. The result is leather that looks tired years before the rest of the car does. A wipe-down doesn't fix it. Reconditioning does.",
+            "Reconditioning runs through four stages in a strict order. Grime and body oils come out of the pores first, worn or faded sections of the dye get evened up next, then the hide is fed with conditioner so it flexes instead of cracking, and a UV-resistant seal goes on last to slow the sun down. Skip a stage, or run them out of order, and the seat ends up patchy instead of restored.",
+            "The studio sits in Cranbourne North, about five minutes out of central Cranbourne, so this is about as local as a specialist leather job gets. Book it on its own from $75 or fold it into an Interior Reset so one drop-off sorts the whole cabin. Allow anywhere from a morning to a full working day, driven by how many seats you're doing and how far gone they are.",
+        ],
+        "surrounding": [
+            "Cranbourne East", "Cranbourne West", "Cranbourne North", "Cranbourne South", "Clyde North",
+            "Clyde", "Lynbrook", "Lyndhurst", "Hampton Park", "Botanic Ridge",
+            "Junction Village", "Skye",
+        ],
+        "cross_links": [
+            ("Car detailing Cranbourne", "/car-detailing-cranbourne"),
+            ("Ceramic coating Cranbourne", "/ceramic-coating-cranbourne"),
+            ("Paint correction Cranbourne", "/paint-correction-cranbourne"),
+            ("All packages", "/packages"),
+        ],
+        "faq_extra": [
+            ("Are you mobile? Can you come to me in Cranbourne?", "No, leather work stays at the Cranbourne North studio. The dye touch-up stage in particular needs proper light and a controlled space to come out even, and from central Cranbourne the studio is only around five minutes away anyway."),
+            ("How much is leather reconditioning in Cranbourne?", "The starting figure is $75. From there it moves with how much of the interior you're doing (one seat, the front pair, or everything), what state the hide is in, and whether it rides along with an Interior Reset booking or stands alone. A firm quote comes once we've laid eyes on the seats."),
+        ],
+    },
 ]
 
 # ============================================================
@@ -731,7 +899,12 @@ def build_select_options(options):
 
 
 def build_page(page):
-    s = SERVICES[page["service"]]
+    # Service-level copy is shared by every suburb page for that service, which is
+    # what the duplication gate flags on a newly added suburb. A page may override
+    # any service copy key via "copy_overrides" to carry its own wording; pages
+    # without overrides render exactly as before.
+    s = dict(SERVICES[page["service"]])
+    s.update(page.get("copy_overrides", {}))
     suburb = page["suburb"]
     slug = page["slug"]
     canonical = f"{SITE}/{slug}"
@@ -2150,13 +2323,21 @@ def build_service_hub_page(s):
 
 
 def main():
+    # Optional argv filter: name slugs to build only those pages. Live pages have
+    # been patched since first generation (seo_100_patch, pixel), so an unfiltered
+    # run overwrites those patches - only do that deliberately.
+    only = set(sys.argv[1:])
     for page in PAGES:
+        if only and page["slug"] not in only:
+            continue
         out_path = ROOT / f"{page['slug']}.html"
         html = build_page(page)
         out_path.write_text(html, encoding="utf-8")
         line_count = html.count("\n") + 1
         print(f"Wrote {page['slug']}.html  ({line_count} lines, {len(html)} chars)")
     for s in SERVICE_HUBS:
+        if only and s["slug"] not in only:
+            continue
         out_path = ROOT / f"{s['slug']}.html"
         html = build_service_hub_page(s)
         out_path.write_text(html, encoding="utf-8")
