@@ -8,10 +8,15 @@ Run once. Idempotent (overwrites). Keep the script for adding more
 suburbs in future Phase rollouts and for the SEO_brief pace target
 of 2 sites/day.
 
+Every page written is passed through .build/meta_pixel_patch.py and
+.build/seo_100_patch.py (see finish()), so output carries the Meta pixel,
+twitter:image, skip link and <main> the templates themselves lack.
+
 Usage:
-    python3 _build_suburb_lps.py
+    python3 _build_suburb_lps.py [slug ...]
 """
 
+import importlib.util
 import sys
 from pathlib import Path
 
@@ -2322,10 +2327,38 @@ def build_service_hub_page(s):
 """
 
 
+def _load_patcher(name):
+    spec = importlib.util.spec_from_file_location(name, ROOT / ".build" / f"{name}.py")
+    mod = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(mod)
+    return mod
+
+
+def finish(out_path):
+    """Run the site's idempotent patchers over a freshly written page.
+
+    The templates above predate the Meta pixel and the SEO-100 pass, so raw
+    output ships with no pixel, no twitter:image, no skip link and no <main>.
+    That is how the Cranbourne trio went live untracked on 2026-09-07. Running
+    the same patchers the committed pages were fixed with makes a regenerated
+    page match them. A patcher that cannot anchor stops the build.
+    """
+    changed, note = _load_patcher("meta_pixel_patch").patch(str(out_path))
+    if note.startswith("SKIPPED"):
+        sys.exit(f"{out_path.name}: meta pixel {note}")
+    seo = _load_patcher("seo_100_patch").patch(out_path.name)
+    html = out_path.read_text(encoding="utf-8")
+    for needle in ("987419320779913", 'name="twitter:image"', 'class="skip-link"', '<main id="main">'):
+        if needle not in html:
+            sys.exit(f"{out_path.name}: patched output still missing {needle}")
+    return ([note] if changed else []) + seo
+
+
 def main():
     # Optional argv filter: name slugs to build only those pages. Live pages have
-    # been patched since first generation (seo_100_patch, pixel), so an unfiltered
-    # run overwrites those patches - only do that deliberately.
+    # been patched since first generation (seo_100_patch, pixel, image work), and
+    # finish() re-applies only the first two, so an unfiltered run can still undo
+    # later hand edits - only do that deliberately.
     only = set(sys.argv[1:])
     for page in PAGES:
         if only and page["slug"] not in only:
@@ -2334,7 +2367,7 @@ def main():
         html = build_page(page)
         out_path.write_text(html, encoding="utf-8")
         line_count = html.count("\n") + 1
-        print(f"Wrote {page['slug']}.html  ({line_count} lines, {len(html)} chars)")
+        print(f"Wrote {page['slug']}.html  ({line_count} lines, {len(html)} chars)  patched: {', '.join(finish(out_path))}")
     for s in SERVICE_HUBS:
         if only and s["slug"] not in only:
             continue
@@ -2342,7 +2375,7 @@ def main():
         html = build_service_hub_page(s)
         out_path.write_text(html, encoding="utf-8")
         line_count = html.count("\n") + 1
-        print(f"Wrote {s['slug']}.html  ({line_count} lines, {len(html)} chars)")
+        print(f"Wrote {s['slug']}.html  ({line_count} lines, {len(html)} chars)  patched: {', '.join(finish(out_path))}")
 
 
 if __name__ == "__main__":

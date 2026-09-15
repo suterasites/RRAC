@@ -22,8 +22,9 @@ analytics but pollutes an ad-optimisation signal.
 NOTE ON THE GENERATOR: new Car Detailing x suburb LPs are cloned from
 car-detailing-pakenham.html by gen_car_detailing_suburbs.py, so patching the
 committed pages here means future suburb LPs inherit the pixel for free. No
-generator change needed. (_build_suburb_lps.py stays retired - it predates both
-the GA4 events and the SEO-100 pass.)
+generator change needed. _build_suburb_lps.py predates the pixel, and shipped
+the Cranbourne trio without it on 2026-09-07, so since 2026-09-15 its finish()
+step runs this patcher (and seo_100_patch.py) over every page it writes.
 
 Idempotent. Safe to re-run. Usage: python3 .build/meta_pixel_patch.py
 """
