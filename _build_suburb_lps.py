@@ -736,6 +736,42 @@ PAGES = [
         ],
     },
     {
+        # Metro head term, not a suburb. The studio is fixed in Cranbourne North, so
+        # this page sells the drive honestly rather than implying a city-wide van -
+        # same framing and the same ~45 min from the CBD as car-detailing-melbourne.
+        "service": "ceramic-coating",
+        "suburb": "Melbourne",
+        "slug": "ceramic-coating-melbourne",
+        "copy_overrides": {
+            "tiers_intro": "Entry-level sealant through to a full multi-year ceramic. If you are driving in from the other side of town it is worth settling the tier on the phone first, so the car goes straight onto the right job on the day.",
+        },
+        "drive_min": 45,
+        "drive_route": "via EastLink / M1",
+        "geo_lat": "-37.8136",
+        "geo_lon": "144.9631",
+        "intro_paragraphs": [
+            "Melbourne weather is the reason paint here ages the way it does. Summer sun sits on a parked bonnet for eight hours at a stretch, bayside air carries salt, the inner east drops sap through half the year, and every freeway run lays down a film of fine grit. None of it announces itself. You notice it the first time you park a five-year-old car next to a new one in the same colour.",
+            "A ceramic coating is a silica layer cured into the factory clear coat rather than laid on top of it, which is why it keeps working for years where a wax is gone in weeks. Contamination sits on the coating instead of bonding to the paint, rain sheets off rather than beading and drying into spots, and the UV barrier slows the oxidation that turns a dark car chalky. On a Melbourne daily driver it is the cheapest protection against the thing that actually costs money later, which is resale.",
+            "Every coating is applied in the studio at Cranbourne North, in Melbourne's south-east. That is not a convenience, it is a requirement. Bonding needs clean air, a stable temperature and lighting hard enough to expose defects before the coating locks them in, and none of that exists in a driveway. From the CBD it is about 45 minutes down EastLink or the M1, and considerably less from the south-east. Paint Enhancement with a sealant usually goes home the same afternoon; a full correct-and-coat stays with us a day or two.",
+        ],
+        "surrounding": [
+            "Dandenong", "Glen Waverley", "Frankston", "Brighton", "Berwick",
+            "Narre Warren", "Cranbourne", "Clyde North", "Pakenham", "Carnegie",
+            "Mornington", "Springvale",
+        ],
+        "cross_links": [
+            ("Ceramic coating Cranbourne", "/ceramic-coating-cranbourne"),
+            ("Ceramic coating Berwick", "/ceramic-coating-berwick"),
+            ("Paint correction", "/paint-correction"),
+            ("All packages", "/packages"),
+        ],
+        "faq_extra": [
+            ("Are you mobile? Can you come to me in Melbourne?", "Not for coating. The bonding stage is unforgiving - airborne dust, a humidity swing or poor light all end up sealed permanently under the ceramic - so every coating is applied at the Cranbourne North studio. It is roughly 45 minutes from the CBD via EastLink or the M1. <strong>Mobile headlight restoration</strong> is the one service that does travel, as a separate add-on."),
+            ("How much is ceramic coating in Melbourne?", "Pricing starts at $300 for Paint Enhancement finished with a ceramic sealant, and from $1,000 for the full multi-year system where the paint is corrected first and coated over the top. Where a car lands inside that comes down to its size, the condition of the paint and how long you plan to keep it, so we confirm the figure once we have seen it."),
+            ("Is it worth driving across Melbourne for a coating?", "That is your call, and it depends on the tier. For a sealant on a tidy car, probably not - book something closer. For a full correction and multi-year coating the car is with us for a day or two either way, so the drive happens twice on a job that lasts years. Most of our out-of-area work is the second kind."),
+        ],
+    },
+    {
         "service": "paint-correction",
         "suburb": "Cranbourne",
         "slug": "paint-correction-cranbourne",
