@@ -1277,6 +1277,7 @@ def build_page(page):
       <h3 class="text-xl md:text-2xl text-neutral-950 font-bold mb-2">Send us a message</h3>
       <p class="text-neutral-600 mb-6">Tell us about your car and the tier you're thinking. We'll come back with a {suburb} quote.</p>
       <form action="https://formspree.io/f/mojrwrgw" method="POST" class="space-y-4">
+        <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px;width:1px;height:1px;opacity:0;">
         <input type="hidden" name="_subject" value="{form_subject}" />
         <input type="hidden" name="_next" value="https://www.radiantridesautocare.com.au/thank-you" />
         <input type="hidden" name="_source_page" value="{slug}" />
@@ -2307,6 +2308,7 @@ def build_service_hub_page(s):
       <h3 class="text-xl md:text-2xl text-neutral-950 font-bold mb-2">Send us a message</h3>
       <p class="text-neutral-600 mb-6">Tell us about your car and what you're after. We'll come back with a quote.</p>
       <form action="https://formspree.io/f/mojrwrgw" method="POST" class="space-y-4">
+        <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px;width:1px;height:1px;opacity:0;">
         <input type="hidden" name="_subject" value="{s['form_subject']}" />
         <input type="hidden" name="_next" value="https://www.radiantridesautocare.com.au/thank-you" />
         <input type="hidden" name="_source_page" value="{s['slug']}" />
