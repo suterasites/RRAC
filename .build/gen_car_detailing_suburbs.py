@@ -201,8 +201,8 @@ def build_page(sub):
                                  "We do offer mobile headlight restoration as a separate add-on.")
     sub.setdefault("faq6", (
         f"How much is car detailing in {name}?",
-        "Pricing starts from $110 for our Basic Interior and Exterior package and $150 for Interior "
-        "Reset and Protection. Paint Enhancement is from $300. Add-ons like odor elimination, leather "
+        "Pricing starts from $130 for our Basic Interior and Exterior package and $200 for Interior "
+        "Reset and Protection. Paint Enhancement is from $350. Add-ons like odor elimination, leather "
         "reconditioning and engine bay clean are priced on top. We quote individually after knowing the vehicle."))
     paras = [p if p else WASH_VS_DETAIL.format(name=name) for p in sub["paras"]]
 

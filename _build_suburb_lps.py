@@ -99,7 +99,7 @@ HEADER = """<header class="site-header">
   <div class="header-nav hidden md:block">
     <div class="container-x grid grid-cols-3 items-center py-4">
       <div></div>
-      <nav class="hidden md:flex items-center justify-center gap-10 lg:gap-14">
+      <nav class="hidden md:flex items-center justify-center gap-5 lg:gap-12">
         <a href="/" class="nav-link">Home</a>
         <a href="/about" class="nav-link">About</a>
         <div class="mega-wrap" data-mega="packages">
@@ -108,6 +108,7 @@ HEADER = """<header class="site-header">
             <svg class="mega-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
           </a>
         </div>
+        <a href="/window-tinting" class="nav-link">Window Tinting</a>
         <a href="/our-work" class="nav-link">Our Work</a>
       </nav>
       <div class="hidden md:flex justify-end">
@@ -122,25 +123,25 @@ HEADER = """<header class="site-header">
       <div class="grid grid-cols-1 lg:grid-cols-5 gap-4">
         <a href="/packages#basic" class="mega-card featured">
           <div class="name">Basic Interior &amp; Exterior</div>
-          <div class="price"><span class="from">From</span>$110</div>
+          <div class="price"><span class="from">From</span>$130</div>
           <p class="desc">Two-bucket wash, vacuum, microfibre dry. The everyday refresh.</p>
           <span class="more">Details <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg></span>
         </a>
         <a href="/packages#full-interior" class="mega-card featured">
           <div class="name">Interior Reset &amp; Protection</div>
-          <div class="price"><span class="from">From</span>$150</div>
+          <div class="price"><span class="from">From</span>$200</div>
           <p class="desc">Vents, upholstery deep clean or leather reconditioning, dashboard protection.</p>
           <span class="more">Details <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg></span>
         </a>
         <a href="/packages#exterior" class="mega-card featured">
           <div class="name">Paint Enhancement</div>
-          <div class="price"><span class="from">From</span>$300</div>
+          <div class="price"><span class="from">From</span>$350</div>
           <p class="desc">Clay bar, decontamination wash, single stage polish, ceramic sealant option.</p>
           <span class="more">Details <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg></span>
         </a>
         <a href="/packages#complete" class="mega-card featured">
           <div class="name">Correction &amp; Coating</div>
-          <div class="price"><span class="from">From</span>$1,000</div>
+          <div class="price"><span class="from">From</span>$1,100</div>
           <p class="desc">Full paint correction, 2-stage cut and polish, ceramic coating.</p>
           <span class="more">Details <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg></span>
         </a>
@@ -158,6 +159,7 @@ HEADER = """<header class="site-header">
       <div class="border-t border-white/10 mt-6 pt-5">
         <div class="text-xs uppercase tracking-[0.18em] text-neutral-400 mb-4">Or browse by service</div>
         <div class="flex flex-wrap gap-2">
+          <a href="/window-tinting" class="inline-flex items-center px-3.5 py-2 border border-white/15 text-white text-xs uppercase tracking-[0.14em] font-semibold hover:bg-white/5 hover:border-white/30 transition">Window Tinting</a>
           <a href="/ceramic-coating" class="inline-flex items-center px-3.5 py-2 border border-white/15 text-white text-xs uppercase tracking-[0.14em] font-semibold hover:bg-white/5 hover:border-white/30 transition">Ceramic Coating</a>
           <a href="/paint-correction" class="inline-flex items-center px-3.5 py-2 border border-white/15 text-white text-xs uppercase tracking-[0.14em] font-semibold hover:bg-white/5 hover:border-white/30 transition">Paint Correction</a>
           <a href="/pre-sale-detail" class="inline-flex items-center px-3.5 py-2 border border-white/15 text-white text-xs uppercase tracking-[0.14em] font-semibold hover:bg-white/5 hover:border-white/30 transition">Pre-Sale Detail</a>
@@ -184,14 +186,15 @@ HEADER = """<header class="site-header">
       <details>
         <summary class="nav-link py-2 cursor-pointer flex items-center justify-between">Packages <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg></summary>
         <div class="mt-1 pl-4 pb-2 flex flex-col gap-2 text-sm">
-          <a href="/packages#basic" class="text-neutral-400 hover:text-white">Basic Interior &amp; Exterior - From $110</a>
-          <a href="/packages#full-interior" class="text-neutral-400 hover:text-white">Interior Reset &amp; Protection - From $150</a>
-          <a href="/packages#pre-sale" class="text-neutral-400 hover:text-white">Pre Sale Detail - From $225</a>
-          <a href="/packages#exterior" class="text-neutral-400 hover:text-white">Paint Enhancement - From $300</a>
-          <a href="/packages#complete" class="text-neutral-400 hover:text-white">Correction &amp; Coating - From $1,000</a>
+          <a href="/packages#basic" class="text-neutral-400 hover:text-white">Basic Interior &amp; Exterior - From $130</a>
+          <a href="/packages#full-interior" class="text-neutral-400 hover:text-white">Interior Reset &amp; Protection - From $200</a>
+          <a href="/packages#pre-sale" class="text-neutral-400 hover:text-white">Pre Sale Detail - From $275</a>
+          <a href="/packages#exterior" class="text-neutral-400 hover:text-white">Paint Enhancement - From $350</a>
+          <a href="/packages#complete" class="text-neutral-400 hover:text-white">Correction &amp; Coating - From $1,100</a>
           <a href="/packages" class="text-white font-semibold mt-1">View all packages -&gt;</a>
           <div class="border-t border-white/10 my-2"></div>
           <div class="text-xs uppercase tracking-[0.16em] text-neutral-500 font-semibold pb-1">By service</div>
+          <a href="/window-tinting" class="text-neutral-400 hover:text-white">Window Tinting</a>
           <a href="/ceramic-coating" class="text-neutral-400 hover:text-white">Ceramic Coating</a>
           <a href="/paint-correction" class="text-neutral-400 hover:text-white">Paint Correction</a>
           <a href="/pre-sale-detail" class="text-neutral-400 hover:text-white">Pre-Sale Detail</a>
@@ -201,6 +204,7 @@ HEADER = """<header class="site-header">
           <a href="/advanced-odor-elimination" class="text-neutral-400 hover:text-white">Odor Elimination</a>
         </div>
       </details>
+      <a href="/window-tinting" class="nav-link py-2">Window Tinting</a>
       <a href="/our-work" class="nav-link py-2">Our Work</a>
       <a href="/contact" class="enquire-btn mt-2 self-start">Enquire Now</a>
       <div class="pt-4 mt-2 border-t border-white/10 flex flex-col gap-2.5 text-sm">
@@ -243,6 +247,7 @@ FOOTER = """<footer class="bg-black border-t border-white/10">
         <li><a href="/" class="hover:text-white">Home</a></li>
         <li><a href="/about" class="hover:text-white">About</a></li>
         <li><a href="/packages" class="hover:text-white">Packages</a></li>
+        <li><a href="/window-tinting" class="hover:text-white">Window Tinting</a></li>
         <li><a href="/our-work" class="hover:text-white">Our Work</a></li>
         <li><a href="/contact" class="hover:text-white">Contact</a></li>
       </ul>
@@ -309,7 +314,7 @@ SERVICES = {
             },
             {
                 "name": "Paint Enhancement<br/>with Ceramic Sealant",
-                "price": "$300",
+                "price": "$350",
                 "primary": True,
                 "features": [
                     "Pre-foam and decontamination wash",
@@ -321,11 +326,11 @@ SERVICES = {
             },
             {
                 "name": "Correction &amp; Coating",
-                "price": "$1,000",
+                "price": "$1,100",
                 "primary": True,
                 "features": [
                     "Everything in Paint Correction",
-                    "Two-stage cut and polish",
+                    "Multi-stage cut and polish",
                     "Multi-year ceramic coating applied",
                     "3 to 8 year longevity depending on product",
                     "Best fit for long-hold ownership",
@@ -339,8 +344,8 @@ SERVICES = {
         ],
         "tier_select_options": [
             "Ceramic Sealant Add-On - From $50",
-            "Paint Enhancement with Ceramic Sealant - From $300",
-            "Correction & Coating - From $1,000",
+            "Paint Enhancement with Ceramic Sealant - From $350",
+            "Correction & Coating - From $1,100",
             "Not sure - recommend",
         ],
         "faq_default": [
@@ -350,7 +355,7 @@ SERVICES = {
             ("Can I wash my car normally after a ceramic coating?", "Yes, with two caveats. Skip the automatic brush washes at the local servo because they undo the work. Stick to a two-bucket hand wash with a pH-neutral shampoo. Ceramic makes the wash easier because dirt sheets off rather than bonding to the paint."),
         ],
         "hero_image": "brand_assets/bmw-exterior-04.jpeg",
-        "from_price_label": "$300 (sealant) / $1,000 (full)",
+        "from_price_label": "$350 (sealant) / $1,100 (full)",
     },
     "paint-correction": {
         "label": "Paint Correction",
@@ -364,23 +369,23 @@ SERVICES = {
             ("Genuine cut and polish", "Two-stage cut and polish removes deeper defects then refines the finish, rather than glazing over the damage with fillers."),
         ],
         "tiers_h2": "Three correction levels",
-        "tiers_intro": "From a single-stage enhancement to a full two-stage cut and polish with ceramic. We assess the paint and recommend the tier that fits the condition.",
+        "tiers_intro": "From a single-stage enhancement to a multi-stage cut and polish with ceramic. We assess the paint and recommend the tier that fits the condition.",
         "tiers": [
             {
                 "name": "Paint Enhancement",
-                "price": "$300",
+                "price": "$350",
                 "primary": False,
                 "features": [
                     "Pre-foam and decontamination wash",
                     "Clay bar removes bonded contamination",
                     "Single stage machine polish",
                     "Removes light swirls and oxidation",
-                    "Spray wax or ceramic sealant finish",
+                    "Ceramic spray sealant finish (3-6 months)",
                 ],
             },
             {
                 "name": "Paint Correction",
-                "price": "$400",
+                "price": "$650",
                 "primary": True,
                 "features": [
                     "Full decontamination prep",
@@ -392,11 +397,11 @@ SERVICES = {
             },
             {
                 "name": "Correction &amp; Coating",
-                "price": "$1,000",
+                "price": "$1,100",
                 "primary": True,
                 "features": [
                     "Full paint correction included",
-                    "Two-stage cut and polish",
+                    "Multi-stage cut and polish",
                     "Multi-year ceramic coating applied",
                     "Long-haul protection on freshly corrected paint",
                     "Best fit for resale or long-hold ownership",
@@ -406,12 +411,12 @@ SERVICES = {
         "schema_offers": [
             ("Paint Enhancement", "Single-stage machine polish with decontamination prep. Removes light swirls and oxidation."),
             ("Paint Correction", "Multi-pass correction that removes deeper swirls and holograms, restoring depth and gloss."),
-            ("Correction & Coating", "Full two-stage cut and polish with multi-year ceramic coating applied."),
+            ("Correction & Coating", "Full multi-stage cut and polish with multi-year ceramic coating applied."),
         ],
         "tier_select_options": [
-            "Paint Enhancement - From $300",
-            "Paint Correction - From $400",
-            "Correction & Coating - From $1,000",
+            "Paint Enhancement - From $350",
+            "Paint Correction - From $650",
+            "Correction & Coating - From $1,100",
             "Not sure - recommend",
         ],
         "faq_default": [
@@ -421,7 +426,7 @@ SERVICES = {
             ("Will correction damage the clear coat?", "No, when it's done correctly with the right pads, compounds and machine technique. We measure paint thickness on jobs that require deeper correction so we stay well within safe tolerance."),
         ],
         "hero_image": "brand_assets/bmw-exterior-02.jpeg",
-        "from_price_label": "$300 (enhancement) / $1,000 (full)",
+        "from_price_label": "$350 (enhancement) / $1,100 (full)",
     },
     "car-detailing": {
         "label": "Car Detailing",
@@ -439,7 +444,7 @@ SERVICES = {
         "tiers": [
             {
                 "name": "Basic Interior &amp; Exterior",
-                "price": "$110",
+                "price": "$130",
                 "primary": False,
                 "features": [
                     "Pre-foam and two-bucket hand wash",
@@ -451,7 +456,7 @@ SERVICES = {
             },
             {
                 "name": "Interior Reset &amp; Protection",
-                "price": "$150",
+                "price": "$200",
                 "primary": True,
                 "features": [
                     "Everything in Basic Interior Clean",
@@ -463,7 +468,7 @@ SERVICES = {
             },
             {
                 "name": "Paint Enhancement",
-                "price": "$300",
+                "price": "$350",
                 "primary": True,
                 "features": [
                     "Full decontamination wash",
@@ -480,20 +485,20 @@ SERVICES = {
             ("Paint Enhancement", "Decontamination wash, clay bar, single stage polish, ceramic sealant option."),
         ],
         "tier_select_options": [
-            "Basic Interior & Exterior - From $110",
-            "Interior Reset & Protection - From $150",
-            "Paint Enhancement - From $300",
-            "Pre Sale Detail - From $225",
+            "Basic Interior & Exterior - From $130",
+            "Interior Reset & Protection - From $200",
+            "Paint Enhancement - From $350",
+            "Pre Sale Detail - From $275",
             "Not sure - recommend",
         ],
         "faq_default": [
             ("How long does detailing take?", "Timing depends on the size and condition of the car plus the package you book. A Basic Interior &amp; Exterior typically runs two to three hours. Bigger Interior Reset or Paint Enhancement packages are a half day to full day. We confirm timing when we quote."),
             ("What's the difference between a wash and a detail?", "A wash cleans the outside. A detail cleans the outside AND resets the inside, with deeper attention to vents, carpet, upholstery, trim and surfaces a wash never touches. The result lasts weeks, not days."),
-            ("Do you do pre-sale details for cars being listed?", "Yes. Our Pre Sale Detail (from $225) is built specifically for cars being prepared for sale. We focus on the touch points and photo-ready surfaces that buyers actually look at."),
+            ("Do you do pre-sale details for cars being listed?", "Yes. Our Pre Sale Detail (from $275) is built specifically for cars being prepared for sale. We focus on the touch points and photo-ready surfaces that buyers actually look at."),
             ("Can I add odor elimination or leather reconditioning?", "Yes. Both run as add-ons to any package. Mention them in the enquiry form or when we call back and we'll factor them into the quote."),
         ],
         "hero_image": "brand_assets/mercedes-interior-front.jpeg",
-        "from_price_label": "$110 (basic) / $300 (paint enhancement)",
+        "from_price_label": "$130 (basic) / $350 (paint enhancement)",
     },
     "leather-reconditioning": {
         "label": "Leather Reconditioning",
@@ -523,7 +528,7 @@ SERVICES = {
             },
             {
                 "name": "Interior Reset &amp; Protection<br/>with Leather Add-On",
-                "price": "$150",
+                "price": "$200",
                 "primary": False,
                 "features": [
                     "Full interior deep clean and reset",
@@ -539,7 +544,7 @@ SERVICES = {
         ],
         "tier_select_options": [
             "Leather Reconditioning - From $75",
-            "Interior Reset & Protection with Leather Add-On - From $150",
+            "Interior Reset & Protection with Leather Add-On - From $200",
             "Not sure - recommend",
         ],
         "faq_default": [
@@ -584,7 +589,7 @@ PAGES = [
         ],
         "faq_extra": [
             ("Are you mobile? Can you come to Narre Warren?", "We are not a mobile ceramic coating service. Ceramic application needs a controlled environment with the right lighting, temperature, and zero airborne contamination, which is why all coating work is carried out in our Cranbourne North studio. Narre Warren is about a 15 minute drive. We do offer <strong>mobile headlight restoration</strong> as a separate add-on."),
-            ("How much is ceramic coating in Narre Warren?", "Pricing starts from $300 for Paint Enhancement with a ceramic sealant and from $1,000 for full Correction &amp; Coating with a multi-year ceramic. Final pricing depends on the vehicle size, current paint condition, and the coating tier you choose. We quote every job individually after we know the vehicle."),
+            ("How much is ceramic coating in Narre Warren?", "Pricing starts from $350 for Paint Enhancement with a ceramic sealant and from $1,100 for full Correction &amp; Coating with a multi-year ceramic. Final pricing depends on the vehicle size, current paint condition, and the coating tier you choose. We quote every job individually after we know the vehicle."),
         ],
     },
     {
@@ -613,7 +618,7 @@ PAGES = [
         ],
         "faq_extra": [
             ("Are you mobile? Can you come to Berwick?", "We are not a mobile paint correction service. Machine polishing needs a controlled environment with the right lighting to see defects properly, which is why all correction work is carried out in our Cranbourne North studio. Berwick is about a 12 minute drive."),
-            ("How much is paint correction in Berwick?", "Pricing starts from $300 for Paint Enhancement and from $400 for full Paint Correction. Correction &amp; Coating bundles correction with a multi-year ceramic from $1,000. Final pricing depends on vehicle size and current paint condition, quoted after we see the car."),
+            ("How much is paint correction in Berwick?", "Pricing starts from $350 for Paint Enhancement and from $650 for full Paint Correction. Correction &amp; Coating bundles correction with a multi-year ceramic from $1,100. Final pricing depends on vehicle size and current paint condition, quoted after we see the car."),
         ],
     },
     {
@@ -671,7 +676,7 @@ PAGES = [
         ],
         "faq_extra": [
             ("Are you mobile? Can you come to Cranbourne?", "We are not a mobile detailing service. All general detailing is carried out at our Cranbourne North studio, about 5 minutes from central Cranbourne. We do offer <strong>mobile headlight restoration</strong> as a separate add-on."),
-            ("How much is car detailing in Cranbourne?", "Pricing starts from $110 for our Basic Interior &amp; Exterior package and $150 for Interior Reset &amp; Protection. Paint Enhancement is from $300. Add-ons like odor elimination, leather reconditioning and engine bay clean are priced on top. We quote individually after knowing the vehicle."),
+            ("How much is car detailing in Cranbourne?", "Pricing starts from $130 for our Basic Interior &amp; Exterior package and $200 for Interior Reset &amp; Protection. Paint Enhancement is from $350. Add-ons like odor elimination, leather reconditioning and engine bay clean are priced on top. We quote individually after knowing the vehicle."),
         ],
     },
     {
@@ -732,7 +737,7 @@ PAGES = [
         ],
         "faq_extra": [
             ("Are you mobile? Can you come to me in Cranbourne?", "No, coating is strictly an in-studio job for us. The bonding stage is unforgiving: airborne dust, humidity swings or bad light all end up sealed under the coating, so ceramic only ever gets applied at Cranbourne North, around five minutes from the middle of Cranbourne. If it's the headlights you're after, that restoration service does travel as a <strong>mobile add-on</strong>."),
-            ("How much is ceramic coating in Cranbourne?", "The entry point is $300, which buys the Paint Enhancement package finished with a ceramic sealant. The full multi-year system, correction first and coating over the top, begins at $1,000. Where your car lands inside those ranges comes down to its size, how the paint presents and which tier suits your ownership plans, so we confirm the number once we've seen it."),
+            ("How much is ceramic coating in Cranbourne?", "The entry point is $350, which buys the Paint Enhancement package finished with a ceramic sealant. The full multi-year system, correction first and coating over the top, begins at $1,100. Where your car lands inside those ranges comes down to its size, how the paint presents and which tier suits your ownership plans, so we confirm the number once we've seen it."),
         ],
     },
     {
@@ -767,7 +772,7 @@ PAGES = [
         ],
         "faq_extra": [
             ("Are you mobile? Can you come to me in Melbourne?", "Not for coating. The bonding stage is unforgiving - airborne dust, a humidity swing or poor light all end up sealed permanently under the ceramic - so every coating is applied at the Cranbourne North studio. It is roughly 45 minutes from the CBD via EastLink or the M1. <strong>Mobile headlight restoration</strong> is the one service that does travel, as a separate add-on."),
-            ("How much is ceramic coating in Melbourne?", "Pricing starts at $300 for Paint Enhancement finished with a ceramic sealant, and from $1,000 for the full multi-year system where the paint is corrected first and coated over the top. Where a car lands inside that comes down to its size, the condition of the paint and how long you plan to keep it, so we confirm the figure once we have seen it."),
+            ("How much is ceramic coating in Melbourne?", "Pricing starts at $350 for Paint Enhancement finished with a ceramic sealant, and from $1,100 for the full multi-year system where the paint is corrected first and coated over the top. Where a car lands inside that comes down to its size, the condition of the paint and how long you plan to keep it, so we confirm the figure once we have seen it."),
             ("Is it worth driving across Melbourne for a coating?", "That is your call, and it depends on the tier. For a sealant on a tidy car, probably not - book something closer. For a full correction and multi-year coating the car is with us for a day or two either way, so the drive happens twice on a job that lasts years. Most of our out-of-area work is the second kind."),
         ],
     },
@@ -800,7 +805,7 @@ PAGES = [
         ],
         "faq_extra": [
             ("Are you mobile? Can you come to me in Cranbourne?", "All correction happens at the Cranbourne North studio rather than in driveways. Reading defects honestly takes controlled lighting and chasing them out takes a stable environment, so mobile isn't something we offer for this work. From anywhere central in Cranbourne you're roughly five minutes from the door."),
-            ("How much is paint correction in Cranbourne?", "A single-stage Paint Enhancement opens at $300, a genuine full correction at $400, and pairing correction with a multi-year ceramic starts from $1,000. The honest answer on any specific car needs eyes on the paint first, so treat those as starting points and we'll firm up the number at drop-off."),
+            ("How much is paint correction in Cranbourne?", "A single-stage Paint Enhancement opens at $350, a genuine full correction at $650, and pairing correction with a multi-year ceramic starts from $1,100. The honest answer on any specific car needs eyes on the paint first, so treat those as starting points and we'll firm up the number at drop-off."),
         ],
     },
     {
@@ -1348,7 +1353,7 @@ SERVICE_HUBS = [
         "label": "Paint Correction",
         "service_type_schema": "Paint Correction",
         "title": "Paint Correction Melbourne | Radiant Rides AutoCare",
-        "description": "Professional paint correction in Melbourne. Swirl removal, machine polish, and clear-coat restoration at our Cranbourne North studio. From $300.",
+        "description": "Professional paint correction in Melbourne. Swirl removal, machine polish, and clear-coat restoration at our Cranbourne North studio. From $350.",
         "og_description": "Machine polishing and swirl removal at our Cranbourne North studio. Single-stage enhancement through to full two-stage correction.",
         "hero_image": "brand_assets/bmw-exterior-02.jpeg",
         "hero_subhead": "Swirl removal, machine polish, and clear-coat restoration. All work in our Cranbourne North studio.",
@@ -1363,8 +1368,8 @@ SERVICE_HUBS = [
         "at_a_glance_rows": [
             ("Studio", "Cranbourne North, VIC"),
             ("Tiers", "3 (enhancement / correction / full)"),
-            ("From", "$300 (Paint Enhancement)"),
-            ("Full correction + coating", "From $1,000"),
+            ("From", "$350 (Paint Enhancement)"),
+            ("Full correction + coating", "From $1,100"),
             ("Turnaround", "1 to 2 days"),
             ("Booking", "Drop-off in studio"),
         ],
@@ -1376,23 +1381,23 @@ SERVICE_HUBS = [
             ("True cut and polish", "Two-stage cut and polish removes deeper defects then refines the finish, rather than glazing over the damage with fillers."),
         ],
         "tiers_h2": "Three correction tiers",
-        "tiers_intro": "From a single-stage enhancement to a full two-stage cut and polish with ceramic. We assess the paint and recommend the tier that fits the condition.",
+        "tiers_intro": "From a single-stage enhancement to a multi-stage cut and polish with ceramic. We assess the paint and recommend the tier that fits the condition.",
         "tiers": [
             {
                 "name": "Paint Enhancement",
-                "price": "$300",
+                "price": "$350",
                 "primary": False,
                 "features": [
                     "Pre-foam and decontamination wash",
                     "Clay bar removes bonded contamination",
                     "Single stage machine polish",
                     "Removes light swirls and oxidation",
-                    "Spray wax or ceramic sealant finish",
+                    "Ceramic spray sealant finish (3-6 months)",
                 ],
             },
             {
                 "name": "Paint Correction",
-                "price": "$400",
+                "price": "$650",
                 "primary": True,
                 "features": [
                     "Full decontamination prep",
@@ -1404,11 +1409,11 @@ SERVICE_HUBS = [
             },
             {
                 "name": "Correction &amp; Coating",
-                "price": "$1,000",
+                "price": "$1,100",
                 "primary": True,
                 "features": [
                     "Full paint correction included",
-                    "Two-stage cut and polish",
+                    "Multi-stage cut and polish",
                     "Multi-year ceramic coating applied",
                     "Long-haul protection on freshly corrected paint",
                     "Best fit for resale or long-hold ownership",
@@ -1459,17 +1464,17 @@ SERVICE_HUBS = [
             ("Will the swirls come back?", "Not if you wash the car correctly. The leading cause of new swirls is automatic brush washes and dry-wiping with the wrong cloth. Two-bucket hand wash with pH-neutral shampoo is the rule."),
             ("Should I correct before applying ceramic?", "Yes. Ceramic coating locks in whatever is on the paint at the time of application, including swirl marks. Correction gets the surface right before the coating goes down."),
             ("Are you mobile? Can you come to me?", "No. Paint correction requires controlled studio lighting to see defects properly during the work. All correction is carried out at our Cranbourne North studio. We do offer <strong>mobile headlight restoration</strong> as a separate add-on."),
-            ("How much does paint correction cost in Melbourne?", "From $300 for Paint Enhancement, from $400 for full Paint Correction, from $1,000 for Correction &amp; Coating with multi-year ceramic. Final pricing depends on vehicle size and current paint condition, quoted after we see the car."),
+            ("How much does paint correction cost in Melbourne?", "From $350 for Paint Enhancement, from $650 for full Paint Correction, from $1,100 for Correction &amp; Coating with multi-year ceramic. Final pricing depends on vehicle size and current paint condition, quoted after we see the car."),
         ],
         "schema_offers": [
             ("Paint Enhancement", "Single-stage machine polish with decontamination prep. Removes light swirls and oxidation."),
             ("Paint Correction", "Multi-pass correction that removes deeper swirls and holograms, restoring depth and gloss."),
-            ("Correction & Coating", "Full two-stage cut and polish with multi-year ceramic coating applied."),
+            ("Correction & Coating", "Full multi-stage cut and polish with multi-year ceramic coating applied."),
         ],
         "tier_select_options": [
-            "Paint Enhancement - From $300",
-            "Paint Correction - From $400",
-            "Correction & Coating - From $1,000",
+            "Paint Enhancement - From $350",
+            "Paint Correction - From $650",
+            "Correction & Coating - From $1,100",
             "Not sure - recommend",
         ],
         "service_interest": "Paint Correction",
@@ -1492,7 +1497,7 @@ SERVICE_HUBS = [
             "Headlight Restoration is the one service we do offer mobile. We come to your driveway or workplace anywhere across Melbourne and restore foggy, yellowed or oxidised plastic headlight lenses back to clear. Or, if you'd rather bring the car to us, we do the same job in our Cranbourne North studio.",
             "Plastic headlight lenses oxidise from UV exposure. The factory clear coating breaks down over five to ten years, the surface gets a yellow haze, light output drops noticeably, and the car looks older than it is. It's also a roadworthy issue on cars due for inspection. Restoration sands the oxidised layer off, polishes the lens back to clarity, and applies a UV-resistant sealant so it stays clear longer.",
             "Most cars are an hour or so per pair of headlights. We finish with a UV-resistant sealant that's the difference between a six-month fix and a result that holds for two-plus years. Done properly, it's the cheapest visible upgrade you can put on an older car.",
-            "Starting from $50, with final pricing depending on the size of the lens, the level of oxidation, and whether you book mobile (call-out fee applies) or in-studio.",
+            "Both lenses are $75, or $100 where the lenses need sanding first. Add a ceramic coating over the restored lens for $75. Mobile bookings add a call-out fee from $20 depending on your location.",
         ],
         "at_a_glance_label": "Headlight restoration",
         "at_a_glance_rows": [
@@ -1501,7 +1506,7 @@ SERVICE_HUBS = [
             ("Time", "~1 hour per pair"),
             ("Finish", "UV-resistant sealant"),
             ("Longevity", "2+ years with sealant"),
-            ("From", "$50 (mobile bookings add call-out fee)"),
+            ("From", "$75 both lenses (mobile call-out from $20)"),
         ],
         "what_it_does_intro": "Restoration is a four-step process that gets foggy plastic lenses back to clear and keeps them clear.",
         "what_it_does_cards": [
@@ -1511,11 +1516,11 @@ SERVICE_HUBS = [
             ("Mobile-friendly", "Headlight restoration is the only service we do mobile. We bring everything to your driveway. Call-out fee applies."),
         ],
         "tiers_h2": "Single service, quoted per vehicle",
-        "tiers_intro": "Headlight restoration starts from $50 per vehicle. Final pricing depends on lens size, oxidation level, and whether you book mobile (call-out fee) or in-studio.",
+        "tiers_intro": "Headlight restoration is $75 for both lenses, or $100 where sanding is required first. Mobile bookings add a call-out fee from $20 based on your location.",
         "tiers": [
             {
                 "name": "Headlight Restoration",
-                "price": "$50",
+                "price": "$75",
                 "primary": True,
                 "features": [
                     "Wet-sand oxidised layer off the lens",
@@ -1523,6 +1528,8 @@ SERVICE_HUBS = [
                     "UV-resistant sealant applied",
                     "Mobile (call-out fee) or in-studio",
                     "Both lenses included as standard pricing",
+                    "$100 where the lenses need sanding first",
+                    "Ceramic coating over the lens - $75 add-on",
                     "~1 hour total per pair",
                 ],
             },
@@ -1535,7 +1542,7 @@ SERVICE_HUBS = [
             ("Cars 5+ years old", "Factory clear coatings start breaking down around year five to seven. Most cars in that age range benefit visibly."),
             ("Pre-sale prep", "A car for sale with foggy headlights reads as neglected. A restored pair makes the whole front of the car look fresher in photos."),
             ("Pre-roadworthy inspection", "Restoring lenses ahead of a roadworthy check avoids a fail mark on light output."),
-            ("Mobile booking by appointment", "Can't drop the car off? We come to you anywhere in Melbourne with the call-out fee added."),
+            ("Mobile booking by appointment", "Can't drop the car off? We come to you anywhere in Melbourne, with a call-out fee from $20 added."),
         ],
         "suburb_cross_links": [],
         "service_area_chips": [
@@ -1543,11 +1550,11 @@ SERVICE_HUBS = [
             "Dandenong", "Hampton Park", "Clyde North", "Hallam", "Endeavour Hills", "Beaconsfield",
         ],
         "faq": [
-            ("Do you do mobile headlight restoration?", "Yes. Headlight restoration is the only service we offer mobile. We come to you anywhere in Melbourne. A call-out fee applies. Bookings by appointment."),
+            ("Do you do mobile headlight restoration?", "Yes. Headlight restoration is the only service we offer mobile. We come to you anywhere in Melbourne. A call-out fee from $20 applies based on your location. Bookings by appointment."),
             ("How long does a restoration take?", "Around an hour per pair of headlights once we're on site. Allow some setup and curing time around that."),
             ("How long does the result last?", "With our UV-resistant sealant, two-plus years is normal. Without a sealant (typical of cheap kits), the haze can return in months."),
             ("Can you fix lenses that are deeply cracked?", "No. Restoration fixes oxidation and surface haze. Deep cracks, impact damage or scoring through the plastic require lens replacement, which is a different repair."),
-            ("How much does it cost?", "Starts from $50 per vehicle. Final pricing depends on lens size, level of oxidation, and whether you book mobile or in-studio. Mobile bookings include a call-out fee on top of the base price."),
+            ("How much does it cost?", "It is $75 for both lenses, or $100 where the lenses need sanding first. A ceramic coating over the restored lens is another $75. Mobile bookings add a call-out fee from $20 based on your location."),
             ("Is it worth it on an older car?", "Yes. Headlight restoration is one of the highest-visible-impact services we do per dollar spent. An older car can look five years younger from the front the same day."),
             ("Will it pass a roadworthy after restoration?", "If the lens itself isn't damaged, restoration plus sealant typically restores the lens back to roadworthy light output. If the failure is from damage rather than haze, replacement is the fix."),
             ("Can I book this with another detail at the studio?", "Yes. Headlight restoration is a popular add-on to any in-studio detail booking. Mention it on the enquiry and we'll include it in the time-block."),
@@ -1556,8 +1563,8 @@ SERVICE_HUBS = [
             ("Headlight Restoration", "Mobile or in-studio. Wet-sand, polish and UV-sealant on yellowed plastic headlight lenses. Pricing quoted per vehicle."),
         ],
         "tier_select_options": [
-            "Headlight Restoration - In-studio (From $50)",
-            "Headlight Restoration - Mobile (From $50 + call-out fee)",
+            "Headlight Restoration - In-studio ($75 both lenses)",
+            "Headlight Restoration - Mobile ($75 + call-out from $20)",
             "Not sure - recommend",
         ],
         "service_interest": "Headlight Restoration",
@@ -1580,7 +1587,7 @@ SERVICE_HUBS = [
             "Engine bays collect grime fast. Oil residue, road dust, leaf litter, and the slow build-up that turns black plastic grey and metal surfaces dull. Most owners never touch the bay because the wrong approach can damage electronics, fuses or sensors. Done properly, it's one of the highest-impact details you can do to a car.",
             "We use a controlled approach: covers on the electrical components, the right degreaser for plastic and metal surfaces, low-pressure rinse rather than blast wash, and a finishing dress on the plastics so the bay holds the clean look. The whole bay comes back closer to showroom than you'd expect.",
             "Engine Bay Clean works best as an add-on to a Paint Enhancement or full detail booking. We're already set up, the time is incremental, and the car comes back finished top-to-bottom. We also do it as a standalone for cars about to be sold or going to a car show.",
-            "Starts from $30 as an add-on to a detail booking, with final pricing depending on the size of the bay, the level of buildup, and whether it's standalone or paired.",
+            "Starts from $50 as an add-on to a detail booking, with final pricing depending on the size of the bay, the level of buildup, and whether it's standalone or paired.",
         ],
         "at_a_glance_label": "Engine bay clean",
         "at_a_glance_rows": [
@@ -1588,7 +1595,7 @@ SERVICE_HUBS = [
             ("Mode", "In-studio only"),
             ("Add-on to", "Any detail or standalone"),
             ("Best paired with", "Pre Sale Detail or Paint Enhancement"),
-            ("From", "$30 (add-on to a detail booking)"),
+            ("From", "$50 (add-on to a detail booking)"),
             ("Time", "Add ~1 hour to a detail booking"),
         ],
         "what_it_does_intro": "Engine bay cleaning isn't just degrease and rinse. Four specific steps make the difference between a clean bay and a damaged one.",
@@ -1599,11 +1606,11 @@ SERVICE_HUBS = [
             ("Final wipe-down", "Metal surfaces, battery casing, intake tube, hose runs - all wiped clean. The bay looks the way it did the day it left the factory."),
         ],
         "tiers_h2": "Single service, quoted per vehicle",
-        "tiers_intro": "Engine bay clean starts from $30 as an add-on to a detail booking. Standalone or larger bays are quoted on enquiry.",
+        "tiers_intro": "Engine bay clean starts from $50 as an add-on to a detail booking. Standalone or larger bays are quoted on enquiry.",
         "tiers": [
             {
                 "name": "Engine Bay Clean",
-                "price": "$30",
+                "price": "$50",
                 "primary": True,
                 "features": [
                     "Electrical components covered before clean",
@@ -1638,7 +1645,7 @@ SERVICE_HUBS = [
             ("Will the result last?", "Months on a daily driver, longer on a car that's garaged. Dressing the plastics is the step that extends the look. Without it, the plastics start fading back within weeks."),
             ("Can you do it as a standalone or only as an add-on?", "Both. The most common booking is as an add-on to a Paint Enhancement, but we'll do it as a standalone for pre-sale prep or show prep."),
             ("Are you mobile?", "No. Engine bay cleaning is in-studio only. The controlled environment matters for electrical safety and water management."),
-            ("How much does it cost?", "Starts from $30 as an add-on to a detail booking. Final pricing depends on bay size, level of buildup, and whether it's standalone or paired with a detail. Quoted per vehicle on enquiry."),
+            ("How much does it cost?", "Starts from $50 as an add-on to a detail booking. Final pricing depends on bay size, level of buildup, and whether it's standalone or paired with a detail. Quoted per vehicle on enquiry."),
         ],
         "schema_offers": [
             ("Engine Bay Clean", "Professional in-studio engine bay degrease, protection of electrical components, and plastic/rubber dress. Quoted per vehicle."),
@@ -1831,26 +1838,26 @@ SERVICE_HUBS = [
         "cta_body": "Tell us the source of the odor and how long it's been there. We'll come back within 24 hours with a quote and an honest assessment of whether one treatment will do it.",
     },
     {
-        # C8 - Pre-Sale Detail (verified $225 price from packages.html)
+        # C8 - Pre-Sale Detail (verified $275 price from packages.html)
         "slug": "pre-sale-detail",
         "label": "Pre-Sale Detail",
         "service_type_schema": "Pre-Sale Car Detail",
-        "title": "Pre-Sale Car Detail Melbourne | From $225 | Radiant Rides AutoCare",
-        "description": "Pre-sale car detail in Melbourne. Photo-ready interior and exterior prep that adds visible value to your listing. From $225 at our Cranbourne North studio.",
-        "og_description": "Photo-ready pre-sale prep for cars going to market. From $225 at our Cranbourne North studio.",
+        "title": "Pre-Sale Car Detail Melbourne | From $275 | Radiant Rides AutoCare",
+        "description": "Pre-sale car detail in Melbourne. Photo-ready interior and exterior prep that adds visible value to your listing. From $275 at our Cranbourne North studio.",
+        "og_description": "Photo-ready pre-sale prep for cars going to market. From $275 at our Cranbourne North studio.",
         "hero_image": "brand_assets/bmw-exterior-03.jpeg",
-        "hero_subhead": "Photo-ready interior and exterior prep that adds visible value to your sale listing. From $225 at our Cranbourne North studio.",
+        "hero_subhead": "Photo-ready interior and exterior prep that adds visible value to your sale listing. From $275 at our Cranbourne North studio.",
         "intro_h2": "Detail that pays for itself on resale",
         "intro_paragraphs": [
             "Pre-sale detail is built for one specific job: getting a car ready to list. Photos, test drives, walk-throughs. Every surface a buyer's eye lands on is reset to clean. The price you can list at goes up by more than the cost of the detail in almost every case.",
             "Buyers in Melbourne are sophisticated. They've scrolled through hundreds of listings before they get to yours. The cars that get clicks are the cars whose photos look better than the ones around them. Clean wheels, dressed tyres, polished paint, vacuumed carpet, wiped trim - all of it shows in the photos and all of it raises the perceived value.",
-            "Our Pre-Sale Detail starts from $225 and includes the touch points and visible surfaces that buyers actually look at. For higher-end cars, we'll recommend layering Paint Enhancement on top so the photos pop and the test drive lands. For prestige cars going to market above $50k, full Correction &amp; Coating is a calculation worth running.",
+            "Our Pre-Sale Detail starts from $275 and includes the touch points and visible surfaces that buyers actually look at. For higher-end cars, we'll recommend layering Paint Enhancement on top so the photos pop and the test drive lands. For prestige cars going to market above $50k, full Correction &amp; Coating is a calculation worth running.",
             "Studio bookings only. Cranbourne North, with most south-east Melbourne suburbs within 20 minutes. Most cars are turned around in a single day.",
         ],
         "at_a_glance_label": "Pre-sale detail",
         "at_a_glance_rows": [
             ("Studio", "Cranbourne North, VIC"),
-            ("From price", "$225"),
+            ("From price", "$275"),
             ("Turnaround", "Typically single day"),
             ("Best paired with", "Paint Enhancement (higher-end cars)"),
             ("Mode", "In-studio only"),
@@ -1863,12 +1870,12 @@ SERVICE_HUBS = [
             ("Touch-point detail", "Door handles, steering wheel, gear shift, indicator stalks. The surfaces buyers actually touch on the test drive. Clean here closes the sale."),
             ("Quick wins on visible wear", "Where it makes sense, we suggest one or two targeted upgrades (headlight restoration, leather conditioning) that lift the perceived value of the car for a fraction of the price uplift they enable."),
         ],
-        "tiers_h2": "Pre-sale detail from $225",
+        "tiers_h2": "Pre-sale detail from $275",
         "tiers_intro": "Single offering. Pricing depends on vehicle size and current condition. Available as a standalone or paired with Paint Enhancement / Correction &amp; Coating for higher-end cars.",
         "tiers": [
             {
                 "name": "Pre-Sale Detail",
-                "price": "$225",
+                "price": "$275",
                 "primary": True,
                 "features": [
                     "Exterior wash, decontamination, wheel and tyre prep",
@@ -1903,13 +1910,13 @@ SERVICE_HUBS = [
             ("Can I book this same day if my listing goes up tomorrow?", "Often yes, depending on the schedule. Call us on 0449 801 505 and we'll tell you straight whether we can fit it in."),
             ("What about photos - do you do those?", "We don't shoot the listing photos but we hand the car back ready to be photographed. Most owners shoot the same day with their phone, ideally in even outdoor light."),
             ("Are you mobile?", "No. Pre-sale detail is in-studio only. The controlled environment is what makes the difference between a wash and a finished car."),
-            ("Is the $225 price the final cost?", "$225 is the starting price for most cars. Larger vehicles, dirtier vehicles, or add-on services (paint enhancement, leather, headlights) move the final number. We quote on enquiry."),
+            ("Is the $275 price the final cost?", "$275 is the starting price for most cars. Larger vehicles, dirtier vehicles, or add-on services (paint enhancement, leather, headlights) move the final number. We quote on enquiry."),
         ],
         "schema_offers": [
-            ("Pre-Sale Car Detail", "Photo-ready exterior and interior prep for cars going to market. From $225 at Cranbourne North studio."),
+            ("Pre-Sale Car Detail", "Photo-ready exterior and interior prep for cars going to market. From $275 at Cranbourne North studio."),
         ],
         "tier_select_options": [
-            "Pre-Sale Detail - Standard (From $225)",
+            "Pre-Sale Detail - Standard (From $275)",
             "Pre-Sale Detail + Paint Enhancement",
             "Pre-Sale Detail + Correction & Coating",
             "Not sure - recommend",
@@ -1918,6 +1925,132 @@ SERVICE_HUBS = [
         "form_subject": "New pre-sale detail enquiry from radiantridesautocare.com.au",
         "cta_h2": "Listing soon? Let's get it photo-ready.",
         "cta_body": "Tell us about the car and the timeline. We'll come back within 24 hours with a quote and an honest call on whether to add Paint Enhancement.",
+    },
+    {
+        # C9 - Window Tinting (nano ceramic only, added 2026-09-29 from Dylan's updated price list)
+        "slug": "window-tinting",
+        "label": "Window Tinting",
+        "service_type_schema": "Window Tinting",
+        "title": "Car Window Tinting Melbourne | Nano Ceramic Tint | Radiant Rides AutoCare",
+        "description": "Nano ceramic car window tinting at our Cranbourne North studio. Up to 93% infrared heat rejection, 99.9% UV blocked, no signal interference. Legal 35% front and 20% rear. From $450.",
+        "og_description": "Nano ceramic film only. Serious heat rejection, 99.9% UV blocked, colour-stable for the life of the car. Old bubbling tint stripped and replaced.",
+        "hero_image": "brand_assets/bmw-e46-green-rear.jpeg",
+        "hero_subhead": "Nano ceramic film fitted at our Cranbourne North studio. Heat and glare cut right down, UV blocked, and legal on Victorian roads.",
+        "intro_h2": "One film family, chosen properly",
+        "intro_paragraphs": [
+            "We fit nano carbon ceramic tint and nothing else. No dyed film, no metallic film. Dyed tint is the cheap stuff that turns purple and bubbles inside a few summers, and it was never doing much for heat in the first place. Metallic film rejects heat but interferes with phone signal, GPS, tyre pressure sensors and keyless entry. Ceramic does the job without either problem.",
+            "The film comes in grades, and the difference between them is infrared rejection, which is the part of sunlight you actually feel as heat on your arm. S5 rejects up to 72%, S7 up to 81%, and S9 up to 93%. All of them block 99.9% of UV, all of them are colour stable, and all of them can be cut to the same legal shade. The grade decides how much heat stays outside the car, not how dark it looks.",
+            "Every film we fit is legal as standard: 35% VLT on the front side windows, 20% on the rear sides and rear screen. That is the Victorian limit, and a tint job darker than it fails a roadworthy no matter how good the film is.",
+            "Old tint that has gone purple, bubbled or started peeling is a roadworthy problem and an eyesore. We strip it, clean the adhesive off the glass, and fit fresh film. Removal starts from $150 depending on the age and quality of what is on there.",
+        ],
+        "at_a_glance_label": "Window tinting, Radiant Rides",
+        "at_a_glance_rows": [
+            ("Film", "Nano carbon ceramic"),
+            ("S5", "Up to 72% IR rejection"),
+            ("S7", "Up to 81% IR rejection"),
+            ("S9", "Up to 93% IR rejection"),
+            ("Legal shade", "35% front, 20% rear"),
+            ("From", "$450"),
+        ],
+        "what_it_does_intro": "Ceramic tint is not a shade of glass. It is a technical film doing four measurable jobs on the way through your windows.",
+        "what_it_does_cards": [
+            ("Rejects infrared heat", "Infrared is the heat you feel through the glass. Depending on the grade, our film rejects up to 93% of it, which is the difference between a cabin you can sit in and one you have to air out first."),
+            ("Blocks 99.9% of UV", "The same UV that burns skin is what fades your dash, cracks the top of the door cards and dries out leather. Ceramic film stops essentially all of it, front seat and back."),
+            ("Zero signal interference", "No metal in the film, so phone reception, GPS, tyre pressure sensors, keyless entry and toll tags all behave exactly as they did before."),
+            ("Colour stable and hard wearing", "Less than 1% fading rate, so it stays the shade it was fitted at instead of going purple. A scratch-resistant hardcoat handles seatbelts, loading and normal cleaning."),
+        ],
+        "tiers_h2": "Tinting and tint removal",
+        "tiers_intro": "Pricing moves with the vehicle and the film grade you choose. Old film on the glass is priced separately because the strip and clean-up is its own job.",
+        "tiers": [
+            {
+                "name": "Nano Ceramic Tint",
+                "price": "$450",
+                "primary": True,
+                "features": [
+                    "Nano carbon ceramic film",
+                    "S5, S7 or S9 grade (up to 93% IR rejection)",
+                    "Blocks 99.9% of harmful UV",
+                    "Zero signal interference",
+                    "Colour stable, under 1% fading rate",
+                    "Scratch-resistant hardcoat",
+                    "Fitted legal at 35% front, 20% rear",
+                ],
+            },
+            {
+                "name": "Old Tint Removal",
+                "price": "$150",
+                "primary": False,
+                "features": [
+                    "Bubbling, purple or peeling film stripped",
+                    "Adhesive residue cleaned off the glass",
+                    "Rear demister lines worked around carefully",
+                    "Priced on the age and quality of the old film",
+                    "Book it with fresh film in the same visit",
+                ],
+            },
+        ],
+        "suitable_for_h2": "When tint earns its money",
+        "suitable_for_intro": "Heat, UV and a roadworthy are the three reasons people book it. Usually two of the three at once.",
+        "suitable_for_cards": [
+            ("Cars that live outside", "No garage at home or at work means the cabin bakes all day. Ceramic film is the single biggest change you can make to how a parked car feels when you get back in it."),
+            ("Kids in the back", "Rear passengers cop the most sun and can do the least about it. UV blocked at 99.9% and a big cut in glare on the back seat."),
+            ("Failed or failing a roadworthy", "Bubbled, purple or too-dark film is a fail. We strip the old tint, clean the glass and refit at the legal shade so it passes."),
+            ("New car delivery", "Factory privacy glass in the rear does almost nothing for heat and nothing at all for the front. Tint it before the first summer, not after."),
+            ("Dark interiors and leather", "Black dashes and leather take the worst of the UV. Blocking it is cheaper than reconditioning the interior later."),
+            ("Anything you leave gear in", "Rear tint makes it harder to see what is in the back. Worth it on utes, wagons and work vehicles."),
+        ],
+        "maintenance_h2": "After the film goes on",
+        "maintenance_subhead": "Tint needs a few days to cure to the glass. What you do in that window decides whether the edges stay down.",
+        "maintenance_blocks": [
+            {
+                "h3": "First few days",
+                "items": [
+                    "Leave the windows up for three days. Rolling one down early lifts the edge.",
+                    "A slight haze or small water pockets are normal. That is moisture curing out and it clears on its own.",
+                    "Don't clean the inside of the glass for at least a week.",
+                    "Park in the sun if you can. It speeds the cure up rather than harming it.",
+                ],
+            },
+            {
+                "h3": "Ongoing care",
+                "items": [
+                    "Ammonia-free glass cleaner only. Ammonia attacks the film, and most supermarket blue cleaners have it.",
+                    "Soft microfibre, not paper towel or anything abrasive.",
+                    "Mind the seatbelt buckle on the way back into the holder. It is the most common cause of a scratch.",
+                    "Loading through the rear? Watch the edges of the glass with tools and boxes.",
+                ],
+            },
+        ],
+        "suburb_cross_links": [],
+        "service_area_chips": [
+            "Cranbourne North", "Cranbourne", "Berwick", "Narre Warren", "Pakenham", "Frankston",
+            "Dandenong", "Hampton Park", "Clyde North", "Hallam", "Endeavour Hills", "Beaconsfield",
+        ],
+        "faq": [
+            ("How dark can I legally tint my car in Victoria?", "Front side windows have to let at least 35% of light through, and the rear sides and rear screen at least 20%. We fit to that as standard on every car. Anything darker is a roadworthy fail and a fine, so we won't fit it unless your vehicle carries a documented exemption."),
+            ("What is nano ceramic tint and why only that?", "It is a non-metallic film with ceramic particles that reject infrared heat. We only fit ceramic because the alternatives both have a catch. Dyed film is cheap, fades to purple and does little for heat. Metallic film works on heat but interferes with phone signal, GPS and sensors. Ceramic avoids both."),
+            ("Will tint block my phone signal, GPS or tyre sensors?", "No. There is no metal in the film, so reception, GPS, keyless entry, tyre pressure sensors and toll tags all work exactly as they did."),
+            ("What is the difference between S5, S7 and S9?", "Infrared rejection. S5 up to 72%, S7 up to 81%, S9 up to 93%. All three block 99.9% of UV and all three can be cut to the same legal shade, so the grade is about how much heat you keep out rather than how dark the car looks. Give us a call and we'll talk you through which one suits how you use the car."),
+            ("How much does window tinting cost?", "From $450, with the final figure depending on the vehicle and the film grade you go with. Stripping old film off first starts from $150 depending on its age and condition. Every car is quoted before we book it in."),
+            ("Can you remove my old bubbling tint?", "Yes. Old film that has gone purple, bubbled or started lifting gets stripped, the adhesive cleaned off the glass, and fresh film fitted. That's from $150 for the removal, and it is worth doing before a roadworthy rather than after a fail."),
+            ("Will old tint fail a roadworthy?", "It can, and often does. Bubbled or peeling film, film that has gone too dark with age, or anything darker than the legal limit will get picked up. If you've already been pulled up for it, we can strip it and refit legal film in one visit."),
+            ("How long does it take and when can I use the windows?", "Most cars are done in a day. Leave the windows up for three days after that while the film cures, and expect a light haze in the first few days that clears on its own."),
+            ("Does ceramic tint fade?", "Under 1% fading rate, so it holds the shade it was fitted at. Purple windows are dyed film breaking down, which is exactly the product we don't fit."),
+        ],
+        "schema_offers": [
+            ("Nano Ceramic Window Tinting", "Nano carbon ceramic window film with up to 93% infrared rejection and 99.9% UV block, fitted at the legal Victorian shade."),
+            ("Old Tint Removal", "Bubbled, purple or peeling window film stripped and adhesive cleaned off the glass, ready for fresh film."),
+        ],
+        "tier_select_options": [
+            "Nano Ceramic Tint - From $450",
+            "Old Tint Removal - From $150",
+            "Tint removal and re-tint",
+            "Not sure - recommend",
+        ],
+        "service_interest": "Window Tinting",
+        "form_subject": "New window tinting enquiry from radiantridesautocare.com.au",
+        "cta_h2": "Ready to cut the heat?",
+        "cta_body": "Tell us the car, whether there is old film on it, and how you use it. We'll come back within 24 hours with a fixed quote and a straight answer on which grade is worth it.",
     },
 ]
 

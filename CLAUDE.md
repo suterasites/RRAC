@@ -27,6 +27,30 @@
 - Complete Exterior Enhancement
 - Subscription Detailing
 - Mobile Headlight Restoration
+- **Window Tinting** (added 2026-09-29) - nano carbon ceramic film ONLY, no dyed and no metallic. Grades S5 / S7 / S9 at up to 72% / 81% / 93% IR rejection, all blocking 99.9% UV. From $450; old tint removal from $150. **Advertise the legal shades only: 35% VLT front sides, 20% rear sides and rear screen.** Dylan fits 5/15/20/35/40/50% but only the legal combination goes on the site. Own page at `/window-tinting`, a nav item, a homepage section and a Packages tab.
+
+### Pricing (current from Dylan's "Detailed Price List (Updated).docx", applied 2026-09-29)
+| Service | Was | Now |
+|---|---|---|
+| Basic Interior Clean | $65 | $75 |
+| Basic Exterior Wash | $65 | $75 |
+| Basic Interior & Exterior | $110 | $130 |
+| Pre Sale Detail | $225 | $275 |
+| Interior Reset & Protection | $150 | $200 (or $150 added onto any exterior package) |
+| Paint Enhancement | $300 | $350 |
+| Paint Correction | $400 | $650 |
+| Correction & Coating | $1,000 | $1,100 |
+| Ceramic coating - wheels | from $50/wheel | from $75/wheel |
+| Ceramic coating - headlights | $100 | $100 |
+| Subscription Detailing | $150/mo | $200/mo |
+| Clay & Seal | (unpriced on site) | $150 |
+| Headlight Restoration | from $50 | $75 both lenses, $100 if sanding needed, ceramic add-on $75, mobile call-out from $20 |
+| Engine Bay Clean | from $30 | from $50 |
+| Advanced Odor Elimination | $120 | $120 |
+| Leather Reconditioning | $75 | $75 |
+| Window Tinting | - | from $450, removal from $150 |
+
+Prices live in the HTML AND in `_build_suburb_lps.py` + `.build/gen_car_detailing_suburbs.py` + `.build/seo_100_patch.py`. Change all of them or a regeneration quietly restores the old figures.
 
 ### Service Area
 Cranbourne North + Melbourne (mobile-capable for headlight restoration; in-shop for full details)

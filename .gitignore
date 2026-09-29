@@ -11,3 +11,7 @@ temporary screenshots/
 .vscode/
 .idea/
 *.swp
+
+# Client source docs never belong in a deployed repo
+*.docx
+*.pdf

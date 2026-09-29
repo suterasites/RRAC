@@ -75,7 +75,7 @@ TITLES = {
 # meta-description rewrites -> 150-160 band (were 175/192)
 METAS = {
     "privacy.html": "How Radiant Rides AutoCare collects, uses and protects the personal information you share when you book or request a quote, under the Australian Privacy Act.",
-    "ceramic-coating.html": "Professional ceramic coating in Melbourne. Multi-year paint protection at our Cranbourne North studio. Spray sealant from $50, full coating from $1,000.",
+    "ceramic-coating.html": "Professional ceramic coating in Melbourne. Multi-year paint protection at our Cranbourne North studio. Spray sealant from $50, full coating from $1,100.",
 }
 
 # Business entity, mirrored from index.html + LocalBusiness added so the audit

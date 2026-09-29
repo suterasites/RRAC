@@ -162,6 +162,12 @@
   .nav-link { color: rgba(255,255,255,0.78); font-size: 0.95rem; font-weight: 500; transition: color .15s ease; white-space: nowrap; }
   .nav-link:hover, .nav-link.active { color: #fff; }
 
+  /* Five nav items: keep the row clear of the Enquire button between md and lg */
+  @media (min-width: 768px) and (max-width: 1023px) {
+    .nav-link { font-size: 0.8rem; }
+    .enquire-btn { padding: 0.6rem 1.1rem; font-size: 0.78rem; }
+  }
+
   /* Mobile nav */
   #mobileNav { transition: opacity .2s ease, transform .2s ease; }
   #mobileNav.hidden { opacity: 0; pointer-events: none; }
