@@ -1086,7 +1086,7 @@ def build_page(page):
 </nav>
 
 <section class="relative hero-bg overflow-hidden">
-  <img src="{s['hero_image']}" alt="" class="absolute inset-0 w-full h-full object-cover" />
+  <img src="{s['hero_image']}" alt="" fetchpriority="high" decoding="async" class="absolute inset-0 w-full h-full object-cover" />
   <div class="relative z-10 container-x py-20 md:py-28">
     <div class="max-w-3xl">
       <div class="tagline mb-5">Serving {suburb} from Cranbourne North</div>
@@ -1934,7 +1934,7 @@ SERVICE_HUBS = [
         "title": "Car Window Tinting Melbourne | Nano Ceramic Tint | Radiant Rides AutoCare",
         "description": "Nano ceramic car window tinting at our Cranbourne North studio. Up to 93% infrared heat rejection, 99.9% UV blocked, no signal interference. Legal 35% front and 20% rear. From $450.",
         "og_description": "Nano ceramic film only. Serious heat rejection, 99.9% UV blocked, colour-stable for the life of the car. Old bubbling tint stripped and replaced.",
-        "hero_image": "brand_assets/bmw-e46-green-rear.jpeg",
+        "hero_image": "brand_assets/tint-falcon-xr6-side.jpeg",
         "hero_subhead": "Nano ceramic film fitted at our Cranbourne North studio. Heat and glare cut right down, UV blocked, and legal on Victorian roads.",
         "intro_h2": "One film family, chosen properly",
         "intro_paragraphs": [
@@ -2021,6 +2021,16 @@ SERVICE_HUBS = [
                 ],
             },
         ],
+        "gallery_h2": "Tint we have fitted",
+        "gallery_intro": "Every car on this page was tinted at the Cranbourne North studio. Ceramic film, cut to the glass, finished at the legal shade.",
+        "gallery": [
+            ("brand_assets/tint-bmw-rear-glass.jpeg", 1200, 1600, "Ceramic tint on the rear screen of a BMW 5 Series"),
+            ("brand_assets/tint-audi-s3-rear-hatch.jpeg", 1200, 1600, "Tinted rear hatch glass on an Audi S3"),
+            ("brand_assets/tint-falcon-xr6-windscreen.jpeg", 1200, 1600, "Studio lighting across the tinted glass of a Ford Falcon"),
+            ("brand_assets/tint-bmw-side.jpeg", 1200, 1600, "Tinted side windows on a red BMW 5 Series"),
+            ("brand_assets/tint-audi-s3-side.jpeg", 1200, 1600, "Tinted front and rear side windows on a white Audi S3"),
+            ("brand_assets/tint-hilux-side.jpeg", 1200, 1600, "Tinted windows on a Toyota Hilux dual cab"),
+        ],
         "suburb_cross_links": [],
         "service_area_chips": [
             "Cranbourne North", "Cranbourne", "Berwick", "Narre Warren", "Pakenham", "Frankston",
@@ -2103,6 +2113,15 @@ def build_suburb_cross_link_cards(links):
     return "\n".join(cards)
 
 
+def build_gallery_tiles(items):
+    out = []
+    for src, w, h, alt in items:
+        out.append(f"""      <figure class="border border-white/10 overflow-hidden">
+        <img width="{w}" height="{h}" src="{src}" alt="{alt}" loading="lazy" decoding="async" class="w-full object-cover" />
+      </figure>""")
+    return "\n".join(out)
+
+
 def build_service_hub_page(s):
     canonical = f"{SITE}/{s['slug']}"
     intro_paras_html = "\n        ".join(f"<p>{p}</p>" for p in s["intro_paragraphs"])
@@ -2181,6 +2200,31 @@ def build_service_hub_page(s):
 </section>"""
     else:
         suburb_section = ""
+
+    # Recent-work gallery (optional - services where we hold our own photos)
+    if s.get("gallery"):
+        gallery_section = f"""
+
+<div class="section-divider"></div>
+
+<!-- Recent work -->
+<section class="py-20 md:py-28">
+  <div class="container-x">
+    <div class="max-w-2xl mb-10">
+      <div class="tagline mb-4">Recent work</div>
+      <h2 class="text-3xl md:text-5xl mb-5 uppercase leading-tight">{s['gallery_h2']}</h2>
+      <p class="text-neutral-400 text-lg leading-relaxed">{s['gallery_intro']}</p>
+    </div>
+    <div class="grid grid-cols-2 lg:grid-cols-3 gap-3">
+{build_gallery_tiles(s["gallery"])}
+    </div>
+    <div class="mt-10">
+      <a href="/our-work" class="btn btn-secondary">See more of our work</a>
+    </div>
+  </div>
+</section>"""
+    else:
+        gallery_section = ""
 
     # FAQ + schema
     faq_html = build_faq_html(s["faq"])
@@ -2287,7 +2331,7 @@ def build_service_hub_page(s):
 
 <!-- Hero -->
 <section class="relative hero-bg overflow-hidden">
-  <img src="{s['hero_image']}" alt="" class="absolute inset-0 w-full h-full object-cover" />
+  <img src="{s['hero_image']}" alt="" fetchpriority="high" decoding="async" class="absolute inset-0 w-full h-full object-cover" />
   <div class="relative z-10 container-x py-20 md:py-28">
     <div class="max-w-3xl">
       <div class="tagline mb-5">Melbourne {s['label'].lower()}</div>
@@ -2359,6 +2403,7 @@ def build_service_hub_page(s):
     <p class="text-center text-neutral-500 text-sm mt-8">Final pricing depends on vehicle size and current condition. We quote every job after seeing the car.</p>
   </div>
 </section>
+{gallery_section}
 
 <!-- Suitable for -->
 <section class="py-20 md:py-28">
