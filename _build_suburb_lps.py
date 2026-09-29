@@ -553,7 +553,7 @@ SERVICES = {
             ("Can you fix denim dye transfer on light leather?", "Yes, and it's one of the most frequent jobs we see on pale interiors. The deep clean draws the blue out of the pores and the finish stage levels any staining the dye has left behind."),
             ("Do I book it standalone or with a detail?", "Whichever suits. It works as its own booking from $75, or paired with an Interior Reset &amp; Protection so the entire cabin is done in one visit. Flag it in the enquiry and the quote covers both together."),
         ],
-        "hero_image": "brand_assets/bmw-m-interior-front.jpeg",
+        "hero_image": "brand_assets/audi-s7-quilted-leather.jpeg",
         "from_price_label": "$75",
     },
 }
@@ -1668,7 +1668,7 @@ SERVICE_HUBS = [
         "title": "Leather Reconditioning Melbourne | Radiant Rides AutoCare",
         "description": "Professional leather seat reconditioning at our Cranbourne North studio. Deep clean, condition, and protect tired or dry leather interiors. Quoted per vehicle.",
         "og_description": "Deep clean and condition tired leather seats and trim. In-studio at Cranbourne North.",
-        "hero_image": "brand_assets/bmw-m-interior-front.jpeg",
+        "hero_image": "brand_assets/audi-s7-quilted-leather.jpeg",
         "hero_subhead": "Deep clean, conditioning and protection for tired or dry leather interiors. In-studio at Cranbourne North.",
         "intro_h2": "Leather brought back, not just wiped down",
         "intro_paragraphs": [
@@ -1845,7 +1845,7 @@ SERVICE_HUBS = [
         "title": "Pre-Sale Car Detail Melbourne | From $275 | Radiant Rides AutoCare",
         "description": "Pre-sale car detail in Melbourne. Photo-ready interior and exterior prep that adds visible value to your listing. From $275 at our Cranbourne North studio.",
         "og_description": "Photo-ready pre-sale prep for cars going to market. From $275 at our Cranbourne North studio.",
-        "hero_image": "brand_assets/bmw-exterior-03.jpeg",
+        "hero_image": "brand_assets/mercedes-s63-studio-front.jpeg",
         "hero_subhead": "Photo-ready interior and exterior prep that adds visible value to your sale listing. From $275 at our Cranbourne North studio.",
         "intro_h2": "Detail that pays for itself on resale",
         "intro_paragraphs": [
