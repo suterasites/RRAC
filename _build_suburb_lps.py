@@ -1939,7 +1939,7 @@ SERVICE_HUBS = [
         "intro_h2": "One film family, chosen properly",
         "intro_paragraphs": [
             "We fit nano carbon ceramic tint and nothing else. No dyed film, no metallic film. Dyed tint is the cheap stuff that turns purple and bubbles inside a few summers, and it was never doing much for heat in the first place. Metallic film rejects heat but interferes with phone signal, GPS, tyre pressure sensors and keyless entry. Ceramic does the job without either problem.",
-            "The film comes in grades, and the difference between them is infrared rejection, which is the part of sunlight you actually feel as heat on your arm. S5 rejects up to 72%, S7 up to 81%, and S9 up to 93%. All of them block 99.9% of UV, all of them are colour stable, and all of them can be cut to the same legal shade. The grade decides how much heat stays outside the car, not how dark it looks.",
+            "The film comes in grades, and the difference between them is infrared rejection, which is the part of sunlight you actually feel as heat on your arm. S5 rejects up to 72%, S7 up to 81%, and S9 up to 93%. The grade decides how much heat stays outside the car, not how dark it looks.",
             "Every film we fit is legal as standard: 35% VLT on the front side windows, 20% on the rear sides and rear screen. That is the Victorian limit, and a tint job darker than it fails a roadworthy no matter how good the film is.",
             "Old tint that has gone purple, bubbled or started peeling is a roadworthy problem and an eyesore. We strip it, clean the adhesive off the glass, and fit fresh film. Removal starts from $150 depending on the age and quality of what is on there.",
         ],
@@ -1979,7 +1979,7 @@ SERVICE_HUBS = [
             {
                 "name": "Old Tint Removal",
                 "price": "$150",
-                "primary": False,
+                "primary": True,
                 "features": [
                     "Bubbling, purple or peeling film stripped",
                     "Adhesive residue cleaned off the glass",
@@ -1999,34 +1999,14 @@ SERVICE_HUBS = [
             ("Dark interiors and leather", "Black dashes and leather take the worst of the UV. Blocking it is cheaper than reconditioning the interior later."),
             ("Anything you leave gear in", "Rear tint makes it harder to see what is in the back. Worth it on utes, wagons and work vehicles."),
         ],
-        "maintenance_h2": "After the film goes on",
-        "maintenance_subhead": "Tint needs a few days to cure to the glass. What you do in that window decides whether the edges stay down.",
-        "maintenance_blocks": [
-            {
-                "h3": "First few days",
-                "items": [
-                    "Leave the windows up for three days. Rolling one down early lifts the edge.",
-                    "A slight haze or small water pockets are normal. That is moisture curing out and it clears on its own.",
-                    "Don't clean the inside of the glass for at least a week.",
-                    "Park in the sun if you can. It speeds the cure up rather than harming it.",
-                ],
-            },
-            {
-                "h3": "Ongoing care",
-                "items": [
-                    "Ammonia-free glass cleaner only. Ammonia attacks the film, and most supermarket blue cleaners have it.",
-                    "Soft microfibre, not paper towel or anything abrasive.",
-                    "Mind the seatbelt buckle on the way back into the holder. It is the most common cause of a scratch.",
-                    "Loading through the rear? Watch the edges of the glass with tools and boxes.",
-                ],
-            },
-        ],
+        # No maintenance section: Dylan hands customers a tint aftercare PDF at pickup
+        # (client feedback 2026-10-02), so the on-page version was removed.
         "gallery_h2": "Tint we have fitted",
-        "gallery_intro": "Every car on this page was tinted at the Cranbourne North studio. Ceramic film, cut to the glass, finished at the legal shade.",
+        "gallery_intro": "Every car on this page was tinted at the Cranbourne North studio. Ceramic film, cut to the glass.",
         "gallery": [
             ("brand_assets/tint-bmw-rear-glass.jpeg", 1200, 1600, "Ceramic tint on the rear screen of a BMW 5 Series"),
             ("brand_assets/tint-audi-s3-rear-hatch.jpeg", 1200, 1600, "Tinted rear hatch glass on an Audi S3"),
-            ("brand_assets/tint-falcon-xr6-windscreen.jpeg", 1200, 1600, "Studio lighting across the tinted glass of a Ford Falcon"),
+            ("brand_assets/tint-hilux-studio.jpeg", 1200, 1600, "Toyota Hilux dual cab with tinted glass in the Cranbourne North studio"),
             ("brand_assets/tint-bmw-side.jpeg", 1200, 1600, "Tinted side windows on a red BMW 5 Series"),
             ("brand_assets/tint-audi-s3-side.jpeg", 1200, 1600, "Tinted front and rear side windows on a white Audi S3"),
             ("brand_assets/tint-hilux-side.jpeg", 1200, 1600, "Tinted windows on a Toyota Hilux dual cab"),
@@ -2037,7 +2017,7 @@ SERVICE_HUBS = [
             "Dandenong", "Hampton Park", "Clyde North", "Hallam", "Endeavour Hills", "Beaconsfield",
         ],
         "faq": [
-            ("How dark can I legally tint my car in Victoria?", "Front side windows have to let at least 35% of light through, and the rear sides and rear screen at least 20%. We fit to that as standard on every car. Anything darker is a roadworthy fail and a fine, so we won't fit it unless your vehicle carries a documented exemption."),
+            ("How dark can I legally tint my car in Victoria?", "Front side windows have to let at least 35% of light through, and the rear sides and rear screen at least 20%."),
             ("What is nano ceramic tint and why only that?", "It is a non-metallic film with ceramic particles that reject infrared heat. We only fit ceramic because the alternatives both have a catch. Dyed film is cheap, fades to purple and does little for heat. Metallic film works on heat but interferes with phone signal, GPS and sensors. Ceramic avoids both."),
             ("Will tint block my phone signal, GPS or tyre sensors?", "No. There is no metal in the film, so reception, GPS, keyless entry, tyre pressure sensors and toll tags all work exactly as they did."),
             ("What is the difference between S5, S7 and S9?", "Infrared rejection. S5 up to 72%, S7 up to 81%, S9 up to 93%. All three block 99.9% of UV and all three can be cut to the same legal shade, so the grade is about how much heat you keep out rather than how dark the car looks. Give us a call and we'll talk you through which one suits how you use the car."),

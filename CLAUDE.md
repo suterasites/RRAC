@@ -27,7 +27,7 @@
 - Complete Exterior Enhancement
 - Subscription Detailing
 - Mobile Headlight Restoration
-- **Window Tinting** (added 2026-09-29) - nano carbon ceramic film ONLY, no dyed and no metallic. Grades S5 / S7 / S9 at up to 72% / 81% / 93% IR rejection, all blocking 99.9% UV. From $450; old tint removal from $150. **Advertise the legal shades only: 35% VLT front sides, 20% rear sides and rear screen.** Dylan fits 5/15/20/35/40/50% but only the legal combination goes on the site. Own page at `/window-tinting`, a nav item, a homepage section and a Packages tab.
+- **Window Tinting** (added 2026-09-29) - nano carbon ceramic film ONLY, no dyed and no metallic. Grades S5 / S7 / S9 at up to 72% / 81% / 93% IR rejection, all blocking 99.9% UV. From $450; old tint removal from $150. **Advertise the legal shades only: 35% VLT front sides, 20% rear sides and rear screen.** Dylan fits 5/15/20/35/40/50% but only the legal combination goes on the site. Own page at `/window-tinting`, a nav item, a homepage section and a Packages tab. **Dylan's feedback 2026-10-02 (applied):** no aftercare section on the page - he hands customers a tint aftercare PDF at pickup; the FAQ answer on legal shades stops at the 35/20 figures, with nothing after it (he did NOT want "contact us about darker" written on the page, even though that is what he tells people); and no copy claiming the cars in the gallery are finished at the legal shade, because several of them are not. The page still states the legal shades as what we fit, which is James's call to keep or soften.
 
 ### Pricing (current from Dylan's "Detailed Price List (Updated).docx", applied 2026-09-29)
 | Service | Was | Now |
@@ -132,6 +132,7 @@ Default scheme is dark (black background, white text, lavender accents) - "Radia
 - `brand_assets/` contains logos, hero images, gallery photos pulled from Webflow CDN (24 originals).
 - Logo files: `6993c810021c99eafe30839f_Radiant_Rides_logo_art.png` (full logo), `6993b18f5356d704752d6ff4_RR_Type_Only.png` (wordmark), `699aee6a8a929099d7bd579d_RRAC_WEBCLIP.png` (apple touch icon), `699659fa91a4b7a50b6a86e0_favicon-32x32.png` (favicon).
 - Real customer photos (Dylan's actual work): files starting with `6997b...` (5 photos).
+- `brand_assets/tint-falcon-xr6-windscreen.jpeg` is a **BEFORE** shot - that Falcon had not been tinted yet when it was taken (Dylan, 2026-10-02). It was pulled off `/window-tinting` and `/our-work` and must not go back on any page as tint work. The other Falcon shots are after.
 - Relume placeholder images (files starting with `698d3d...` or `69965...`): use only where Dylan hasn't supplied real photos. Replace with real Dylan-supplied photos opportunistically in monthly updates.
 
 ## Deployment
