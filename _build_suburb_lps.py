@@ -2010,6 +2010,8 @@ SERVICE_HUBS = [
             ("brand_assets/tint-bmw-side.jpeg", 1200, 1600, "Tinted side windows on a red BMW 5 Series"),
             ("brand_assets/tint-audi-s3-side.jpeg", 1200, 1600, "Tinted front and rear side windows on a white Audi S3"),
             ("brand_assets/tint-hilux-side.jpeg", 1200, 1600, "Tinted windows on a Toyota Hilux dual cab"),
+            ("brand_assets/tint-holden-colorado-side.jpeg", 1200, 1600, "Tinted front and rear side windows on an orange Holden Colorado"),
+            ("brand_assets/tint-nissan-patrol-studio.jpeg", 1200, 1600, "Nissan Patrol with tinted glass in the Cranbourne North studio"),
         ],
         "suburb_cross_links": [],
         "service_area_chips": [
@@ -2195,7 +2197,7 @@ def build_service_hub_page(s):
       <h2 class="text-3xl md:text-5xl mb-5 uppercase leading-tight">{s['gallery_h2']}</h2>
       <p class="text-neutral-400 text-lg leading-relaxed">{s['gallery_intro']}</p>
     </div>
-    <div class="grid grid-cols-2 lg:grid-cols-3 gap-3">
+    <div class="grid grid-cols-2 {'lg:grid-cols-4' if len(s['gallery']) % 4 == 0 else 'lg:grid-cols-3'} gap-3">
 {build_gallery_tiles(s["gallery"])}
     </div>
     <div class="mt-10">
