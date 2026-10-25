@@ -1455,6 +1455,7 @@ SERVICE_HUBS = [
         "suburb_cross_links": [
             ("Paint Correction Berwick", "Berwick paint correction at our Cranbourne North studio. 12 min drive via M1.", "/paint-correction-berwick"),
             ("Paint Correction Clyde North", "Defect-free paint for the Clyde North growth corridor. 8 min drive.", "/paint-correction-clyde-north"),
+            ("Paint Correction Cranbourne", "Cranbourne paint correction, 5 min from our Cranbourne North studio.", "/paint-correction-cranbourne"),
         ],
         "faq": [
             ("What is paint correction?", "It's a controlled machine-led process that removes a thin layer of damaged clear coat to reveal a flat, defect-free surface underneath. Done right, it brings back the depth and gloss that washing alone can't restore."),
@@ -1721,8 +1722,9 @@ SERVICE_HUBS = [
             ("Long-hold ownership", "Annual reconditioning at the same time as your interior detail keeps the interior ageing at half the rate it otherwise would."),
         ],
         "suburb_cross_links": [],
+        # A (label, href) chip links to that suburb's LP (WP HQ move 2026-10-26).
         "service_area_chips": [
-            "Cranbourne North", "Cranbourne", "Berwick", "Narre Warren", "Pakenham", "Frankston",
+            "Cranbourne North", ("Cranbourne", "/leather-reconditioning-cranbourne"), "Berwick", "Narre Warren", "Pakenham", "Frankston",
             "Dandenong", "Hampton Park", "Clyde North", "Hallam", "Endeavour Hills", "Beaconsfield",
         ],
         "faq": [
@@ -2161,10 +2163,13 @@ def build_service_hub_page(s):
 </section>"""
     elif s.get("service_area_chips"):
         # Fallback: show service-area chips for services without suburb LPs
-        chips_html = "\n".join(
-            f'      <div class="border border-white/10 px-4 py-3 text-center"><p class="text-neutral-300 text-sm font-semibold">{c}</p></div>'
-            for c in s["service_area_chips"]
-        )
+        def chip(c):
+            if isinstance(c, tuple):
+                label, href = c
+                return (f'      <a href="{href}" class="border border-white/10 px-4 py-3 text-center block hover:border-white/30">'
+                        f'<p class="text-neutral-300 text-sm font-semibold">{label}</p></a>')
+            return f'      <div class="border border-white/10 px-4 py-3 text-center"><p class="text-neutral-300 text-sm font-semibold">{c}</p></div>'
+        chips_html = "\n".join(chip(c) for c in s["service_area_chips"])
         suburb_section = f"""
 
 <!-- Service area -->
